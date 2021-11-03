@@ -35,12 +35,12 @@
             android:text="Welcome to Moody"
             android:textAlignment="center"
             android:textSize="30dp"
-            app:layout_constraintBottom_toTopOf="@+id/editText"
-            app:layout_constraintEnd_toEndOf="@+id/editText"
+            app:layout_constraintBottom_toTopOf="@+id/firstname"
+            app:layout_constraintEnd_toEndOf="@+id/firstname"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/firstname"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
@@ -50,13 +50,13 @@
             android:background="@drawable/input"
             android:hint="First Name"
             android:paddingLeft="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/editText6"
+            app:layout_constraintBottom_toTopOf="@+id/lastname"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/username"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
@@ -66,13 +66,13 @@
             android:background="@drawable/input"
             android:hint="username"
             android:paddingLeft="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/editText3"
+            app:layout_constraintBottom_toTopOf="@+id/email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText6" />
+            app:layout_constraintTop_toBottomOf="@+id/lastname" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/email"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
@@ -82,13 +82,13 @@
             android:background="@drawable/input"
             android:hint="Email"
             android:paddingLeft="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintBottom_toTopOf="@+id/password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+            app:layout_constraintTop_toBottomOf="@+id/username" />
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/password"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
@@ -98,13 +98,13 @@
             android:background="@drawable/input"
             android:hint="Password"
             android:paddingLeft="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/editText5"
+            app:layout_constraintBottom_toTopOf="@+id/phonenumber"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText3" />
+            app:layout_constraintTop_toBottomOf="@+id/email" />
 
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/phonenumber"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
@@ -114,13 +114,13 @@
             android:background="@drawable/input"
             android:hint="Phone Number"
             android:paddingLeft="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintBottom_toTopOf="@+id/register"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText4" />
+            app:layout_constraintTop_toBottomOf="@+id/password" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/register"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
@@ -133,10 +133,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText5" />
+            app:layout_constraintTop_toBottomOf="@+id/phonenumber" />
 
         <EditText
-            android:id="@+id/editText6"
+            android:id="@+id/lastname"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
@@ -146,10 +146,10 @@
             android:background="@drawable/input"
             android:hint="Last Name"
             android:paddingLeft="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/editText2"
+            app:layout_constraintBottom_toTopOf="@+id/username"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText" />
+            app:layout_constraintTop_toBottomOf="@+id/firstname" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
