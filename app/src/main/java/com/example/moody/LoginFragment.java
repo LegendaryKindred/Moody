@@ -45,7 +45,7 @@ public class LoginFragment extends Fragment {
             public void onClick(View view) {
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("users");
-                reference.setValue("change made to backend");
+                reference.setValue("test");
             }
         });
 
