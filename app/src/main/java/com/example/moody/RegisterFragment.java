@@ -55,7 +55,7 @@ public class RegisterFragment extends Fragment {
     }
 
     private void registerUser(){
-        progressBar.setVisibility(getView().VISIBLE);
+
         String firstName = editFirstName.getText().toString().trim();
         String lastName = editLastName.getText().toString().trim();
         String username = editUsername.getText().toString().trim();
@@ -99,8 +99,8 @@ public class RegisterFragment extends Fragment {
             return;
         }
 
-        if(password.length() < 4){
-            editPassword.setError("Password length should be at least 4 characters");
+        if(password.length() < 8){
+            editPassword.setError("Password length should be at least 8 characters");
             editPassword.requestFocus();
             return;
         }
@@ -111,7 +111,7 @@ public class RegisterFragment extends Fragment {
             return;
         }
 
-
+        progressBar.setVisibility(getView().VISIBLE);
         auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override

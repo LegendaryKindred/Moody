@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // setting homepage
         if (savedInstanceState == null){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new HomeFragment()).commit();
-            navigationView.setCheckedItem(R.id.home_menu);
+                    new LoginFragment()).commit();
+            navigationView.setCheckedItem(R.id.login_menu);
         }
     }
 
