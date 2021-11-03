@@ -88,7 +88,7 @@ public class RegisterFragment extends Fragment {
         }
 
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            editEmail.setError("Email is required!");
+            editEmail.setError("Email is invalid!");
             editEmail.requestFocus();
             return;
         }
