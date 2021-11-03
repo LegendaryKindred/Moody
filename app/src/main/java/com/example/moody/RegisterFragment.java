@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -126,6 +127,9 @@ public class RegisterFragment extends Fragment {
                             if(task.isSuccessful()){
                                 Toast.makeText(getActivity(), "User has been registered successfully!", Toast.LENGTH_LONG).show();
                                 progressBar.setVisibility(getView().GONE);
+                                HomeFragment homeFragment = new HomeFragment();
+                                FragmentManager manager = getActivity().getSupportFragmentManager();
+                                manager.beginTransaction().replace(R.id.fragment_container, homeFragment, homeFragment.getTag()).commit();
                             }else{
                                 Toast.makeText(getActivity(), "Failed to register! Try again!1", Toast.LENGTH_LONG).show();
                                 progressBar.setVisibility(getView().GONE);
