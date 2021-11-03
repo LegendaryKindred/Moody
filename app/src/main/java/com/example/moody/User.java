@@ -1,69 +1,31 @@
 package com.example.moody;
 
 public class User {
-    //field
-    private String picture;//need change
-    private String firstname;
-    private String lastname;
-    private String birthday;
-    private String username;
-    private String email;
-    private String password;
-    private String race;
-    private String occupation;
+    public String firstName, lastName, username, email, password, phone;
 
-    //function
-    public User(String picture, String firstname,String lastname,String birthday,String username,String email,String password,String race,String occupation){
-        this.picture=picture;
-        this.firstname=firstname;
-        this.lastname=lastname;
-        this.birthday=birthday;
-        this.username=username;
-        this.email=email;
-        this.password=password;
-        this.race=race;
-        this.occupation=occupation;
-    }
-    //getters and setters
-
-
-    public String getPicture() {
-        return picture;
-    }
-    public void setPicture(String picture){
-        this.picture=picture;
-    }
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public String getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
+    public User(String firstName, String lastName, String username, String email, String password, String phone) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
         this.email = email;
+        this.password = password;
+        this.phone = phone;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getUsername() {
@@ -74,6 +36,14 @@ public class User {
         this.username = username;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -82,19 +52,11 @@ public class User {
         this.password = password;
     }
 
-    public String getOccupation() {
-        return occupation;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setOccupation(String occupation) {
-        this.occupation = occupation;
-    }
-
-    public String getRace() {
-        return race;
-    }
-
-    public void setRace(String race) {
-        this.race = race;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
