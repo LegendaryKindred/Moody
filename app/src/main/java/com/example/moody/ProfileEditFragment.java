@@ -66,6 +66,28 @@ public class ProfileEditFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 //update new information
+                String fn=firstname.getText().toString().trim();
+                String ln=lastname.getText().toString().trim();
+                String un=username.getText().toString().trim();
+
+                if(fn.isEmpty()){
+                    firstname.setError("First Name is required!");
+                    firstname.requestFocus();
+                    return;
+                }
+                if(ln.isEmpty()){
+                    lastname.setError("First Name is required!");
+                    lastname.requestFocus();
+                    return;
+                }
+                if(un.isEmpty()){
+                    username.setError("First Name is required!");
+                    username.requestFocus();
+                    return;
+                }
+
+
+                //return to the profile page
                 ProfileFragment ProfileFragment = new ProfileFragment();
                 FragmentManager manager = getActivity().getSupportFragmentManager();
                 manager.beginTransaction().replace(R.id.fragment_container, ProfileFragment, ProfileFragment.getTag()).commit();
