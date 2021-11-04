@@ -14,18 +14,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import java.util.Calendar;
 
 public class ProfileEditFragment extends Fragment{
     DatePickerDialog.OnDateSetListener listener;
-    TextView birthday_date,done;
+    TextView birthday_date;
+    TextView done;
     EditText firstname,lastname,username,password;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.home_fragment, container, false);
+        View view = inflater.inflate(R.layout.profile_edit_fragment, container, false);
         birthday_date = (TextView) view.findViewById(R.id.birthday_date);
         firstname=view.findViewById(R.id.firstname);
         lastname=view.findViewById(R.id.lastname);
@@ -46,7 +48,7 @@ public class ProfileEditFragment extends Fragment{
                         android.R.style.Theme_Holo_Light_Dialog_MinWidth,
                         listener,
                         year, month, day);
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+               dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.show();
             }
         });
@@ -64,8 +66,12 @@ public class ProfileEditFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 //update new information
+                ProfileFragment ProfileFragment = new ProfileFragment();
+                FragmentManager manager = getActivity().getSupportFragmentManager();
+                manager.beginTransaction().replace(R.id.fragment_container, ProfileFragment, ProfileFragment.getTag()).commit();
             }
         });
+
 
         return view;
     }
