@@ -18,7 +18,8 @@ public class NotificationFragment extends Fragment {
     RecyclerView.LayoutManager layoutManager;
 
     // hardcode to check if list shows
-    String[] notificationListContents = {"Welcome","Friend Request","Updates","Friend Request","Cheer Up","Recent Moods"};
+    String[] notiTitleContents = {"Welcome","Friend Request","Updates","Friend Request","Cheer Up","Recent Moods"};
+
 
     @Nullable
     @Override
@@ -30,7 +31,7 @@ public class NotificationFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
         // load the list items to the recycler view
-        adapter = new NotificationAdapter(notificationListContents);
+        adapter = new NotificationAdapter(notiTitleContents);
         recyclerView.setAdapter(adapter);
 
 
