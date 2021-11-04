@@ -19,13 +19,19 @@ import java.util.Calendar;
 
 public class ProfileEditFragment extends Fragment{
     DatePickerDialog.OnDateSetListener listener;
-    TextView birthday_date;
+    TextView birthday_date,done;
+    EditText firstname,lastname,username,password;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_fragment, container, false);
         birthday_date = (TextView) view.findViewById(R.id.birthday_date);
+        firstname=view.findViewById(R.id.firstname);
+        lastname=view.findViewById(R.id.lastname);
+        username=view.findViewById(R.id.username);
+        password=view.findViewById(R.id.password);
+        done=view.findViewById(R.id.done);
 
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
@@ -53,6 +59,13 @@ public class ProfileEditFragment extends Fragment{
                 birthday_date.setText(date);
             }
         };
+
+        done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //update new information
+            }
+        });
 
         return view;
     }

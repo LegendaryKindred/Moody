@@ -10,11 +10,12 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/done"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="65dp"
             android:layout_marginBottom="35dp"
+            android:clickable="true"
             android:text="Done"
             android:textColor="@color/mint"
             android:textSize="20dp"
@@ -31,7 +32,7 @@
             android:layout_marginEnd="43dp"
             android:layout_marginBottom="35dp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintEnd_toStartOf="@+id/done"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,6 +62,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/firstname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Previous first name"
@@ -94,6 +96,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/lastname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="previous last name"
@@ -127,6 +130,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="previous username"
@@ -161,6 +165,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -192,13 +197,13 @@
                 android:text="Birthday: "
                 android:textSize="20dp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/birthday_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Select Date"
-                android:textSize="20dp"
-                />
+                android:textSize="20dp" />
 
 
         </LinearLayout>
