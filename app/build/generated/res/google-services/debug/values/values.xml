@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">908653970661-d8nhqtmh50k2p1270a040du24ml3j8so.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">908653970661</string>
+    <string name="google_api_key" translatable="false">AIzaSyCfLaQvSFYnEIwIzC-Nf8zI149d9-o-_Mk</string>
+    <string name="google_app_id" translatable="false">1:908653970661:android:98a2013cd71b66ab4d000c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCfLaQvSFYnEIwIzC-Nf8zI149d9-o-_Mk</string>
+    <string name="google_storage_bucket" translatable="false">moody-7de51.appspot.com</string>
+    <string name="project_id" translatable="false">moody-7de51</string>
+</resources>
