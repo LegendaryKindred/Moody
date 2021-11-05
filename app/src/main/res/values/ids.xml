@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="registerFirstName" type="id" />
+    <item name="registerLastname" type="id" />
+    <item name="registerUsername" type="id" />
+    <item name="registerEmail" type="id" />
+    <item name="registerPassword" type="id" />
+    <item name="registerPhone" type="id" />
+    <item name="registerButton" type="id" />
+    <item name="registerProgressBar" type="id" />
+    <item name="loginPprogressBar" type="id" />
+    <item name="login_password" type="id" />
+    <item name="login_username" type="id" />
+    <item name="login_button" type="id" />
+</resources>

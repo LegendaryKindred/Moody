@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/home_menu"
+            android:title="Home"
+            android:icon="@drawable/home_icon"
+            />
+        <item android:id="@+id/profile_menu"
+            android:title="Profile"
+            android:icon="@drawable/profile_icon"
+            />
+        <item android:id="@+id/timeline_menu"
+            android:title="Timeline"
+            android:icon="@drawable/timeline_icon"
+            />
+        <item android:id="@+id/notification_menu"
+            android:title="Notification"
+            android:icon="@drawable/notification_icon"
+            />
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:title="Friends"
+            android:icon="@drawable/friends_icon">
+            <menu>
+                <item
+                    android:id="@+id/new_friend_menu"
+                    android:title="Find New Friends"/>
+                <item
+                    android:id="@+id/my_friend_menu"
+                    android:title="My Friends"/>
+                <item
+                    android:id="@+id/group_chat_menu"
+                    android:title="Group Chat"
+                    />
+                <item
+                    android:id="@+id/login_menu"
+                    android:icon="@drawable/login_logout_icon"
+                    android:title="Login"/>
+                <item
+                    android:id="@+id/logout_menu"
+                    android:icon="@drawable/login_logout_icon"
+                    android:title="Logout"/>
+            </menu>
+        </item>
+    </group>
+</menu>
