@@ -1,8 +1,11 @@
 package com.example.moody
 
 
+import androidx.core.os.bundleOf
+import androidx.fragment.app.testing.launchFragment
 import org.junit.Test
 import com.google.common.truth.Truth.assertThat
+import org.junit.Assert
 
 /**
  * Login test cases
@@ -13,11 +16,14 @@ class LoginUtilTest {
 
     @Test
     fun `return false if everything is empty`(){
+        val fragmentArgs = bundleOf("numElements" to 0)
+
         val result = LoginUtil.validateLoginInput(
             "",
             ""
         )
         assertThat(result).isFalse()
+        Assert.assertEquals(result,"")
     }
 
     @Test

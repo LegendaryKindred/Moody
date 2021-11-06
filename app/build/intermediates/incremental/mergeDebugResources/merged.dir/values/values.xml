@@ -3345,6 +3345,9 @@
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
     </style>
     <style name="EmptyTheme"/>
+    <style name="FragmentScenarioEmptyFragmentActivityTheme" parent="android:Theme.WithActionBar">
+        <item name="android:windowIsFloating">false</item>
+    </style>
     <style name="MaterialAlertDialog.MaterialComponents" parent="AlertDialog.AppCompat">
     <item name="android:layout">@layout/mtrl_alert_dialog</item>
     <item name="listItemLayout">@layout/mtrl_alert_select_dialog_item</item>

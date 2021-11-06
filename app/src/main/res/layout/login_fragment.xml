@@ -26,6 +26,7 @@
             android:textSize="50dp"/>
 
         <EditText
+            android:id="@+id/editusernameText"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
@@ -35,6 +36,7 @@
             android:background="@drawable/input"/>
 
         <EditText
+            android:id="@+id/editpasswordText"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
@@ -44,6 +46,7 @@
             android:background="@drawable/input"/>
 
         <Button
+            android:id="@+id/loginbutton"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:background="@drawable/login_btn"

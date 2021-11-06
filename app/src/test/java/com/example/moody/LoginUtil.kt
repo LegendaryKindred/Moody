@@ -12,6 +12,6 @@ object LoginUtil {
         if (password.length < 8){
             return false
         }
-        return false
+        return true
     }
 }
