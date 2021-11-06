@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Previous first name"
                 android:paddingLeft="20dp"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -98,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:hint="previous last name"
                 android:paddingLeft="20dp"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -131,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:hint="previous username"
                 android:paddingLeft="20dp"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
         </LinearLayout>
 
 
@@ -197,6 +197,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Select Date"
+                android:paddingLeft="15dp"
                 android:textSize="20dp"
                 />
 
@@ -232,10 +233,12 @@
                 android:textStyle="bold" />
 
             <Switch
+                android:id="@+id/profilestatus"
                 android:layout_width="39dp"
                 android:layout_height="7dp"
                 android:layout_weight="1"
                 android:paddingLeft="10dp"
+                android:textSize="15dp"
                 android:text="Public" />
         </LinearLayout>
 

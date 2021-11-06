@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,12 +22,25 @@ import java.util.Calendar;
 public class ProfileEditFragment extends Fragment{
     DatePickerDialog.OnDateSetListener listener;
     TextView birthday_date;
+    Switch profilestatus;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.home_fragment, container, false);
+        View view = inflater.inflate(R.layout.profile_edit_fragment, container, false);
         birthday_date = (TextView) view.findViewById(R.id.birthday_date);
+        profilestatus = (Switch) view.findViewById(R.id.profilestatus);
+        profilestatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b==true){
+                    profilestatus.setText("Private");
+                }
+                else{
+                    profilestatus.setText("Public");
+                }
+            }
+        });
 
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
