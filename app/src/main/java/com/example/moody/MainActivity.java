@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // setting homepage
         if (savedInstanceState == null){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new LoginFragment()).commit();
-            navigationView.setCheckedItem(R.id.login_menu);
+                    new HomeFragment()).commit();
+            navigationView.setCheckedItem(R.id.home_menu);
         }
     }
 
@@ -56,9 +56,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.login_menu:
+            case R.id.home_menu:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new LoginFragment()).commit();
+                        new HomeFragment()).commit();
                 break;
             case R.id.profile_menu:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -84,9 +84,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new GroupChatFragment()).commit();
                 break;
-            case R.id.home_menu:
+            case R.id.login_menu:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new HomeFragment()).commit();
+                        new LoginFragment()).commit();
                 break;
 //            case R.id.logout_menu:
 //                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

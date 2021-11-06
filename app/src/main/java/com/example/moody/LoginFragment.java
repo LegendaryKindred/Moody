@@ -29,7 +29,6 @@ public class LoginFragment extends Fragment {
     private FirebaseAuth auth;
     private ProgressBar progressBar;
 
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
