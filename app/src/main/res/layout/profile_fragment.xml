@@ -73,6 +73,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/firstname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
@@ -106,6 +107,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/lastname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
@@ -139,6 +141,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
@@ -172,6 +175,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
@@ -205,6 +209,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
@@ -238,6 +243,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/birthday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
@@ -273,6 +279,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"

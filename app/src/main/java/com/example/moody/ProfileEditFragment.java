@@ -23,6 +23,8 @@ public class ProfileEditFragment extends Fragment{
     TextView birthday_date;
     TextView done;
     EditText firstname,lastname,username,password;
+    String r_email="ryang96@wisc.edu";
+    String r_password="t356920319qwe";
 
     @Nullable
     @Override
@@ -69,6 +71,7 @@ public class ProfileEditFragment extends Fragment{
                 String fn=firstname.getText().toString().trim();
                 String ln=lastname.getText().toString().trim();
                 String un=username.getText().toString().trim();
+                String pw=password.getText().toString().trim();
 
                 if(fn.isEmpty()){
                     firstname.setError("First Name is required!");
@@ -76,12 +79,12 @@ public class ProfileEditFragment extends Fragment{
                     return;
                 }
                 if(ln.isEmpty()){
-                    lastname.setError("First Name is required!");
+                    lastname.setError("Last Name is required!");
                     lastname.requestFocus();
                     return;
                 }
                 if(un.isEmpty()){
-                    username.setError("First Name is required!");
+                    username.setError("User Name is required!");
                     username.requestFocus();
                     return;
                 }
