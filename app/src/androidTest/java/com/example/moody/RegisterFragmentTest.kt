@@ -29,7 +29,7 @@ class RegisterFragmentTest: TestCase() {
     }
 
     @Test
-    fun testLoginValid(){
+    fun testRegisterValid(){
         val username  = "username1"
         val password = "12345678"
         val firstname = "asdf"
