@@ -125,10 +125,11 @@ public class ProfileEditFragment extends Fragment{
             @Override
             public void onComplete(@NonNull Task task) {
                 if(task.isSuccessful()){
+                    Toast.makeText(getActivity(), "Update successfully", Toast.LENGTH_LONG).show();
                     ProfileFragment profileFragment = new ProfileFragment();
                     FragmentManager manager = getActivity().getSupportFragmentManager();
                     manager.beginTransaction().replace(R.id.fragment_container, profileFragment, profileFragment.getTag()).commit();
-                    Toast.makeText(getActivity(), "Update successfully", Toast.LENGTH_LONG).show();
+
                 }else{
                     Toast.makeText(getActivity(), "Update failed", Toast.LENGTH_LONG).show();
 

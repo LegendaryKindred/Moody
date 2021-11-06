@@ -7,8 +7,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingTop="70dp">
+        android:paddingTop="70dp"
+        android:orientation="vertical">
 
         <ImageView
             android:layout_width="300dp"
@@ -23,7 +23,7 @@
             android:layout_marginTop="30dp"
             android:text="Welcome!"
             android:textAlignment="center"
-            android:textSize="50dp" />
+            android:textSize="50dp"/>
 
         <EditText
             android:id="@+id/login_username"
@@ -32,7 +32,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/input"
-            android:hint="Email "
+            android:hint="username"
             android:paddingLeft="20dp" />
 
         <EditText
@@ -57,23 +57,23 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
 
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New User?    "
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:text="New User?    "/>
 
             <TextView
                 android:id="@+id/goToRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Register"
                 android:textColor="@color/mint"
-                android:textStyle="bold" />
+                android:text="Register"
+                android:textStyle="bold"/>
 
         </LinearLayout>
 

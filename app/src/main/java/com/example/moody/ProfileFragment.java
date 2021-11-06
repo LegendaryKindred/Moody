@@ -90,10 +90,11 @@ public class ProfileFragment extends Fragment {
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                userAuth.signOut();
-                ProfileEditFragment profileEditFragment = new ProfileEditFragment();
+                //userAuth.signOut();
+                HomeFragment homeFragment = new HomeFragment();
                 FragmentManager manager = getActivity().getSupportFragmentManager();
-                manager.beginTransaction().replace(R.id.fragment_container, profileEditFragment, profileEditFragment.getTag()).commit();
+                manager.beginTransaction().replace(R.id.fragment_container, homeFragment, homeFragment.getTag()).commit();
+                userAuth.signOut();
             }
         });
 
