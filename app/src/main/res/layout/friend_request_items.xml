@@ -8,7 +8,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/myfriendlist_card"
+        android:id="@+id/friend_request_card"
         android:layout_margin="10dp"
         app:cardCornerRadius="5dp"
         android:elevation="10dp"
@@ -21,36 +21,45 @@
             android:layout_margin="7dp">
 
             <ImageView
-                android:id="@+id/myfriendpic"
+                android:id="@+id/friend_request_pic"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="7dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/myfriendlistname"
+                app:layout_constraintEnd_toStartOf="@+id/friend_request_name"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/myfriendlistname"
-                android:layout_width="200dp"
+                android:id="@+id/friend_request_name"
+                android:layout_width="190dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
                 android:gravity="center|center_horizontal|left"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/myfriendmood"
-                app:layout_constraintStart_toEndOf="@+id/myfriendpic"
+                app:layout_constraintEnd_toStartOf="@+id/friend_add"
+                app:layout_constraintStart_toEndOf="@+id/friend_request_pic"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/myfriendmood"
+            <ImageButton
+                android:id="@+id/friend_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:textSize="25dp"
+                android:src="@drawable/add"
+                app:layout_constraintEnd_toStartOf="@+id/friend_block"
+                app:layout_constraintStart_toEndOf="@+id/friend_request_name"
+                app:layout_constraintTop_toTopOf="@+id/friend_block" />
+
+            <ImageButton
+                android:id="@+id/friend_block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/block"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/myfriendlistname"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintStart_toEndOf="@+id/friend_add"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

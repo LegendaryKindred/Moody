@@ -29,8 +29,9 @@ public class MyFriendListAdapter extends RecyclerView.Adapter<MyFriendListAdapte
     public void onBindViewHolder(@NonNull MyFriendListAdapter.ViewHolder holder, int position) {
         int resource = myFriendList.get(position).getImageview();
         String name = myFriendList.get(position).getTextviewName();
+        String mood = myFriendList.get(position).getTextViewMood();
 
-        holder.setData(resource, name);
+        holder.setData(resource, name, mood);
 
     }
 
@@ -42,16 +43,19 @@ public class MyFriendListAdapter extends RecyclerView.Adapter<MyFriendListAdapte
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView profilepic;
         TextView friendName;
+        TextView friendmood;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             profilepic = itemView.findViewById(R.id.myfriendpic);
             friendName = itemView.findViewById(R.id.myfriendlistname);
+            friendmood = itemView.findViewById(R.id.myfriendmood);
         }
 
-        public void setData(int resource, String name) {
+        public void setData(int resource, String name, String mood) {
             profilepic.setImageResource(resource);
             friendName.setText(name);
+            friendmood.setText(mood);
         }
     }
 }

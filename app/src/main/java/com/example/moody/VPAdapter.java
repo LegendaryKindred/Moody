@@ -21,7 +21,7 @@ public class VPAdapter extends FragmentStateAdapter {
             case 0:
                 return new MyFriendsListFragment();
             case 1:
-                return new RequestFriend();
+                return new FriendRequestFragment();
         }
         return new MyFriendsListFragment();
     }

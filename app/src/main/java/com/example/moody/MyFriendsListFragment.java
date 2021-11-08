@@ -44,20 +44,20 @@ public class MyFriendsListFragment extends Fragment {
     private void initData() {
         myFriendList = new ArrayList<>();
 
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "James"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "John"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Jannah"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Hollie"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Susan"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Ross"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Rachel"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Cooper"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Gabi"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Hannah"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Yolanda"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Josh"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Crystal"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Fallon"));
+        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "James", "1"));
+        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "John", "1"));
+        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Jannah", "1"));
+        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Hollie", "1"));
+        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Susan", "1"));
+        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Ross", "1"));
+        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Rachel", "1"));
+        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Cooper", "1"));
+        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Gabi", "1"));
+        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Hannah", "1"));
+        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Yolanda", "1"));
+        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Josh", "1"));
+        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Crystal", "1"));
+        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Fallon", "1"));
 
     }
 }
