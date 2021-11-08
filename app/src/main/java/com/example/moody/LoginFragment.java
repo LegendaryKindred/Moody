@@ -103,7 +103,7 @@ public class LoginFragment extends Fragment {
                     manager.beginTransaction().replace(R.id.fragment_container, homeFragment, homeFragment.getTag()).commit();
                 }else{
                     Toast.makeText(getActivity(), "Failed to login! Please check your credentials", Toast.LENGTH_LONG).show();
-
+                    progressBar.setVisibility(getView().GONE);
                 }
             }
         });

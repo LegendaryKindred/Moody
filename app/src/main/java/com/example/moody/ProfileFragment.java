@@ -24,7 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class ProfileFragment extends Fragment {
 
     private TextView firstName, lastName, username, password, email;
-
+    private FirebaseAuth userAuth;
     private FirebaseUser user;
     private DatabaseReference ref;
     private String Uid;
@@ -33,6 +33,7 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.profile_fragment, container, false);
         TextView editBtn = view.findViewById(R.id.profileEdit);
+        TextView logoutBtn = view.findViewById(R.id.profileLogout);
 
         firstName = view.findViewById(R.id.profileFirstName);
         lastName = view.findViewById(R.id.profileLastName);
@@ -85,6 +86,17 @@ public class ProfileFragment extends Fragment {
 
             }
         });
+
+        logoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                userAuth.signOut();
+                ProfileEditFragment profileEditFragment = new ProfileEditFragment();
+                FragmentManager manager = getActivity().getSupportFragmentManager();
+                manager.beginTransaction().replace(R.id.fragment_container, profileEditFragment, profileEditFragment.getTag()).commit();
+            }
+        });
+
 
         return view;
     }

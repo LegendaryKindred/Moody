@@ -108,6 +108,19 @@ public class ProfileEditFragment extends Fragment{
         User.put("username", un);
         User.put("password", pw);
 
+        FirebaseUser USER = FirebaseAuth.getInstance().getCurrentUser();
+
+        user.updatePassword(pw).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+                    Toast.makeText(getActivity(), "Password update successfully", Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(getActivity(), "Password update failed", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         ref.child(Uid).updateChildren(User).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull Task task) {
