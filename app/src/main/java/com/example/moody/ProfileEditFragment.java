@@ -89,9 +89,7 @@ public class ProfileEditFragment extends Fragment{
                 String pw = password.getText().toString().trim();
 
                 updateProfile(fn, ln, un, pw);
-                ProfileFragment profileFragment = new ProfileFragment();
-                FragmentManager manager = getActivity().getSupportFragmentManager();
-                manager.beginTransaction().replace(R.id.fragment_container, profileFragment, profileFragment.getTag()).commit();
+
             }
         });
 
@@ -99,7 +97,7 @@ public class ProfileEditFragment extends Fragment{
         return view;
     }
 
-    public void updateProfile(String fn, String ln, String un, String pw){
+    private void updateProfile(String fn, String ln, String un, String pw){
 
         user = FirebaseAuth.getInstance().getCurrentUser();
         ref = FirebaseDatabase.getInstance().getReference("Users");
@@ -111,12 +109,14 @@ public class ProfileEditFragment extends Fragment{
         User.put("username", un);
         User.put("password", pw);
 
-
         user.updatePassword(pw).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(getActivity(), "Password update successfully", Toast.LENGTH_LONG).show();
+                    ProfileFragment profileFragment = new ProfileFragment();
+                    FragmentManager manager = getActivity().getSupportFragmentManager();
+                    manager.beginTransaction().replace(R.id.fragment_container, profileFragment, profileFragment.getTag()).commit();
                 }else{
                     Toast.makeText(getActivity(), "Password update failed", Toast.LENGTH_LONG).show();
                 }
@@ -127,7 +127,7 @@ public class ProfileEditFragment extends Fragment{
             @Override
             public void onComplete(@NonNull Task task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(getActivity(), "Update successfully", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "Profile Update successfully", Toast.LENGTH_LONG).show();
                 }else{
                     Toast.makeText(getActivity(), "Update failed", Toast.LENGTH_LONG).show();
 
