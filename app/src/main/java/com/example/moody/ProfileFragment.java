@@ -1,6 +1,7 @@
 package com.example.moody;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,39 +43,51 @@ public class ProfileFragment extends Fragment {
         email = view.findViewById(R.id.profileEmail);
 
         user = FirebaseAuth.getInstance().getCurrentUser();
-        ref = FirebaseDatabase.getInstance().getReference("Users");
-        Uid = user.getUid();
 
-        ref.child(Uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DataSnapshot> task) {
-                if(task.isSuccessful()){
-                    if(task.getResult().exists()){
-                        DataSnapshot dataSnapshot = task.getResult();
-                        String fn = String.valueOf(dataSnapshot.child("firstName").getValue());
-                        String ln = String.valueOf(dataSnapshot.child("lastName").getValue());
-                        String un = String.valueOf(dataSnapshot.child("username").getValue());
-                        String pw = String.valueOf(dataSnapshot.child("password").getValue());
-                        String em = String.valueOf(dataSnapshot.child("email").getValue());
+        if(user != null){
+            ref = FirebaseDatabase.getInstance().getReference("Users");
+            Uid = user.getUid();
 
 
-                        firstName.setText(fn);
-                        lastName.setText(ln);
-                        username.setText(un);
-                        password.setText(pw);
-                        email.setText(em);
+            ref.child(Uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DataSnapshot> task) {
+                    if(task.isSuccessful()){
+                        if(task.getResult().exists()){
+                            DataSnapshot dataSnapshot = task.getResult();
+                            String fn = String.valueOf(dataSnapshot.child("firstName").getValue());
+                            String ln = String.valueOf(dataSnapshot.child("lastName").getValue());
+                            String un = String.valueOf(dataSnapshot.child("username").getValue());
+                            String pw = String.valueOf(dataSnapshot.child("password").getValue());
+                            String em = String.valueOf(dataSnapshot.child("email").getValue());
 
-                        Toast.makeText(getActivity(), "Successfully read data", Toast.LENGTH_LONG).show();
 
+                            firstName.setText(fn);
+                            lastName.setText(ln);
+                            username.setText(un);
+                            password.setText(pw);
+                            email.setText(em);
+
+                            Toast.makeText(getActivity(), "Successfully read data", Toast.LENGTH_LONG).show();
+
+
+                        }else{
+                            Toast.makeText(getActivity(), "Fail to read user data2", Toast.LENGTH_LONG).show();
+
+                        }
                     }else{
-                        Toast.makeText(getActivity(), "Fail to read user data2", Toast.LENGTH_LONG).show();
-
+                        Toast.makeText(getActivity(), "Fail to read user data1", Toast.LENGTH_LONG).show();
                     }
-                }else{
-                    Toast.makeText(getActivity(), "Fail to read user data1", Toast.LENGTH_LONG).show();
                 }
-            }
-        });
+            });
+        }else{
+            firstName.setText("Please log in first");
+            lastName.setText("Please log in first");
+            username.setText("Please log in first");
+            password.setText("Please log in first");
+            email.setText("Please log in first");
+        }
+
 
 
         editBtn.setOnClickListener(new View.OnClickListener() {
@@ -90,11 +103,11 @@ public class ProfileFragment extends Fragment {
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //userAuth.signOut();
-                HomeFragment homeFragment = new HomeFragment();
+                FirebaseAuth.getInstance().signOut();
+                LoginFragment loginFragment = new LoginFragment();
                 FragmentManager manager = getActivity().getSupportFragmentManager();
-                manager.beginTransaction().replace(R.id.fragment_container, homeFragment, homeFragment.getTag()).commit();
-                userAuth.signOut();
+                manager.beginTransaction().replace(R.id.fragment_container, loginFragment, loginFragment.getTag()).commit();
+
             }
         });
 

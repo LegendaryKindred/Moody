@@ -89,6 +89,9 @@ public class ProfileEditFragment extends Fragment{
                 String pw = password.getText().toString().trim();
 
                 updateProfile(fn, ln, un, pw);
+                ProfileFragment profileFragment = new ProfileFragment();
+                FragmentManager manager = getActivity().getSupportFragmentManager();
+                manager.beginTransaction().replace(R.id.fragment_container, profileFragment, profileFragment.getTag()).commit();
             }
         });
 
@@ -108,7 +111,6 @@ public class ProfileEditFragment extends Fragment{
         User.put("username", un);
         User.put("password", pw);
 
-        FirebaseUser USER = FirebaseAuth.getInstance().getCurrentUser();
 
         user.updatePassword(pw).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
@@ -126,10 +128,6 @@ public class ProfileEditFragment extends Fragment{
             public void onComplete(@NonNull Task task) {
                 if(task.isSuccessful()){
                     Toast.makeText(getActivity(), "Update successfully", Toast.LENGTH_LONG).show();
-                    ProfileFragment profileFragment = new ProfileFragment();
-                    FragmentManager manager = getActivity().getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.fragment_container, profileFragment, profileFragment.getTag()).commit();
-
                 }else{
                     Toast.makeText(getActivity(), "Update failed", Toast.LENGTH_LONG).show();
 
