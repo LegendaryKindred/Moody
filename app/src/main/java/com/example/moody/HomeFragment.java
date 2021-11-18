@@ -46,7 +46,7 @@ public class HomeFragment extends Fragment {
 //                });
 //
 //            }
-//        });
+//        });bn
         return view;
     }
 }

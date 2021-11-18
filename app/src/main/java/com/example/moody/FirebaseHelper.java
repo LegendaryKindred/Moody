@@ -10,10 +10,5 @@ public class FirebaseHelper {
     public FirebaseHelper(){
     }
 
-    public boolean profileUpdate(FirebaseDatabase db, DatabaseReference ref, String Uid){
-
-        return true;
-    }
-
 
 }
