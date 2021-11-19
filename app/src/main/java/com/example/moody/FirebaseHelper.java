@@ -7,9 +7,12 @@ public class FirebaseHelper {
     private FirebaseDatabase mdb;
     private DatabaseReference mrf;
 
-    public FirebaseHelper(String reference){
-        mdb = FirebaseDatabase.getInstance();
-        mrf = mdb.getReference(reference);
+    public FirebaseHelper(){
+    }
+
+    public boolean profileUpdate(FirebaseDatabase db, DatabaseReference ref, String Uid){
+
+        return true;
     }
 
 

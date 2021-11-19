@@ -6,272 +6,307 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="26"
-8-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml
+8-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="31" />
-9-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml
+9-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml
 10
-11    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
-12    <!-- <uses-sdk android:minSdkVersion="14"/> -->
-13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-13-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\0a7b074b652d95014de176cc9faae700\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:26:5-79
-13-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\0a7b074b652d95014de176cc9faae700\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:26:22-76
-14    <uses-permission android:name="android.permission.INTERNET" />
-14-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\0a7b074b652d95014de176cc9faae700\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
-14-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\0a7b074b652d95014de176cc9faae700\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:27:22-64
-15
-16    <uses-feature
-16-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\ff3b2ac0f81edf7ccf8c3eeca5eabaaf\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:26:5-28:35
-17        android:glEsVersion="0x00020000"
-17-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\ff3b2ac0f81edf7ccf8c3eeca5eabaaf\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:27:9-41
-18        android:required="true" />
-18-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\ff3b2ac0f81edf7ccf8c3eeca5eabaaf\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:28:9-32
-19
-20    <queries>
-20-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\ff3b2ac0f81edf7ccf8c3eeca5eabaaf\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:30:5-34:15
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:5:5-66
+11-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:6:5-78
+12-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:6:22-76
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:7:5-80
+13-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:7:22-78
+14    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+15    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\061e4c6014b429b2e1ef3de19fdf5b2c\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:26:5-79
+16-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\061e4c6014b429b2e1ef3de19fdf5b2c\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:26:22-76
+17
+18    <uses-feature
+18-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\.gradle\caches\transforms-3\4225dab228527237dd316e71a6b09098\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:26:5-28:35
+19        android:glEsVersion="0x00020000"
+19-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\.gradle\caches\transforms-3\4225dab228527237dd316e71a6b09098\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:27:9-41
+20        android:required="true" />
+20-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\.gradle\caches\transforms-3\4225dab228527237dd316e71a6b09098\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:28:9-32
 21
-22        <!-- Needs to be explicitly declared on Android R+ -->
-23        <package android:name="com.google.android.apps.maps" />
-23-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\ff3b2ac0f81edf7ccf8c3eeca5eabaaf\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:33:9-64
-23-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\ff3b2ac0f81edf7ccf8c3eeca5eabaaf\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:33:18-61
-24    </queries>
-25
-26    <uses-permission android:name="android.permission.WAKE_LOCK" />
-26-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\0ef913d10470ceaf4bc18c2c16721b45\transformed\jetified-play-services-measurement-api-20.0.0\AndroidManifest.xml:24:5-68
-26-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\0ef913d10470ceaf4bc18c2c16721b45\transformed\jetified-play-services-measurement-api-20.0.0\AndroidManifest.xml:24:22-65
-27    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-27-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\8edd119f172d33bf3b4bd2b9e7d7aae4\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:26:5-110
-27-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\8edd119f172d33bf3b4bd2b9e7d7aae4\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:26:22-107
-28
-29    <application
-29-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml:5:5-21:19
-30        android:allowBackup="true"
-30-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml:6:9-35
-31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-31-->[androidx.core:core:1.5.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\4b18baa9266eba5441dc9be7b537a834\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
-32        android:debuggable="true"
-33        android:extractNativeLibs="false"
-34        android:icon="@mipmap/ic_launcher"
-34-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml:7:9-43
-35        android:label="@string/app_name"
-35-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml:8:9-41
-36        android:roundIcon="@mipmap/ic_launcher_round"
-36-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml:9:9-54
-37        android:supportsRtl="true"
-37-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml:10:9-35
-38        android:theme="@style/Theme.Moody" >
-38-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml:11:9-43
-39        <activity
-39-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml:12:9-20:20
-40            android:name="com.example.moody.MainActivity"
-40-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml:13:13-41
-41            android:exported="true" >
-41-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml:14:13-36
-42            <intent-filter>
-42-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml:15:13-19:29
-43                <action android:name="android.intent.action.MAIN" />
-43-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml:16:17-69
-43-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml:16:25-66
+22    <queries>
+22-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\.gradle\caches\transforms-3\4225dab228527237dd316e71a6b09098\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:30:5-34:15
+23
+24        <!-- Needs to be explicitly declared on Android R+ -->
+25        <package android:name="com.google.android.apps.maps" />
+25-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\.gradle\caches\transforms-3\4225dab228527237dd316e71a6b09098\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:33:9-64
+25-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\.gradle\caches\transforms-3\4225dab228527237dd316e71a6b09098\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:33:18-61
+26    </queries>
+27
+28    <uses-permission android:name="android.permission.WAKE_LOCK" />
+28-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\8f99fc24535455265a5c32f9da3a7c53\transformed\jetified-play-services-measurement-api-20.0.0\AndroidManifest.xml:24:5-68
+28-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\8f99fc24535455265a5c32f9da3a7c53\transformed\jetified-play-services-measurement-api-20.0.0\AndroidManifest.xml:24:22-65
+29    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+29-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\806f1c8febbf76074e41d663c10ba6ef\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:26:5-110
+29-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\806f1c8febbf76074e41d663c10ba6ef\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:26:22-107
+30
+31    <application
+31-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:8:5-29:19
+32        android:allowBackup="true"
+32-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:9:9-35
+33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+33-->[androidx.core:core:1.7.0] C:\Users\luoli\.gradle\caches\transforms-3\69b57287d68336382df735fc36f402cd\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+34        android:debuggable="true"
+35        android:extractNativeLibs="false"
+36        android:icon="@mipmap/ic_launcher"
+36-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:10:9-43
+37        android:label="@string/app_name"
+37-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:11:9-41
+38        android:roundIcon="@mipmap/ic_launcher_round"
+38-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:12:9-54
+39        android:supportsRtl="true"
+39-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:13:9-35
+40        android:theme="@style/Theme.Moody" >
+40-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:14:9-43
+41        <meta-data
+41-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:16:9-18:70
+42            android:name="com.google.android.geo.API_KEY"
+42-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:17:13-58
+43            android:value="AIzaSyCU2f_JWp7klsHXzCuRKZ4epC7vpEnxaqA" />
+43-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:18:13-68
 44
-45                <category android:name="android.intent.category.LAUNCHER" />
-45-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml:18:17-77
-45-->C:\Users\luoli\Desktop\2021fall\cs506\moody\app\src\main\AndroidManifest.xml:18:27-74
-46            </intent-filter>
-47        </activity>
-48
-49        <service
-49-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\0a7b074b652d95014de176cc9faae700\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:30:9-36:19
-50            android:name="com.google.firebase.components.ComponentDiscoveryService"
-50-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\0a7b074b652d95014de176cc9faae700\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:31:13-84
-51            android:directBootAware="true"
-51-->[com.google.firebase:firebase-common:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\45b4a080f8d120803c4464eae4da744b\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
-52            android:exported="false" >
-52-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\0a7b074b652d95014de176cc9faae700\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:32:13-37
-53            <meta-data
-53-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\0a7b074b652d95014de176cc9faae700\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:33:13-35:85
-54                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-54-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\0a7b074b652d95014de176cc9faae700\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:34:17-107
-55                android:value="com.google.firebase.components.ComponentRegistrar" />
-55-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\0a7b074b652d95014de176cc9faae700\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:35:17-82
-56            <meta-data
-56-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:77:13-79:85
-57                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-57-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:78:17-109
-58                android:value="com.google.firebase.components.ComponentRegistrar" />
-58-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:79:17-82
+45        <activity
+45-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:20:9-28:20
+46            android:name="com.example.moody.MainActivity"
+46-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:21:13-41
+47            android:exported="true" >
+47-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:22:13-36
+48            <intent-filter>
+48-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:23:13-27:29
+49                <action android:name="android.intent.action.MAIN" />
+49-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:24:17-69
+49-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:24:25-66
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:26:17-77
+51-->C:\Users\luoli\Desktop\2021fall\cs506\xian-1117upload\Moody\app\src\main\AndroidManifest.xml:26:27-74
+52            </intent-filter>
+53        </activity>
+54
+55        <service
+55-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\061e4c6014b429b2e1ef3de19fdf5b2c\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:30:9-36:19
+56            android:name="com.google.firebase.components.ComponentDiscoveryService"
+56-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\061e4c6014b429b2e1ef3de19fdf5b2c\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:31:13-84
+57            android:directBootAware="true"
+57-->[com.google.firebase:firebase-common:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\f667b5fec82f1bcb67a523ac0134908f\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+58            android:exported="false" >
+58-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\061e4c6014b429b2e1ef3de19fdf5b2c\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:32:13-37
 59            <meta-data
-59-->[com.google.firebase:firebase-database:20.0.2] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\6df2497b371575efde943d8fc11fc0d6\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:32:13-34:85
-60                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-60-->[com.google.firebase:firebase-database:20.0.2] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\6df2497b371575efde943d8fc11fc0d6\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:33:17-109
+59-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\061e4c6014b429b2e1ef3de19fdf5b2c\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:33:13-35:85
+60                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+60-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\061e4c6014b429b2e1ef3de19fdf5b2c\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:34:17-107
 61                android:value="com.google.firebase.components.ComponentRegistrar" />
-61-->[com.google.firebase:firebase-database:20.0.2] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\6df2497b371575efde943d8fc11fc0d6\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:34:17-82
+61-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\061e4c6014b429b2e1ef3de19fdf5b2c\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:35:17-82
 62            <meta-data
-62-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\0ef913d10470ceaf4bc18c2c16721b45\transformed\jetified-play-services-measurement-api-20.0.0\AndroidManifest.xml:30:13-32:85
-63                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-63-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\0ef913d10470ceaf4bc18c2c16721b45\transformed\jetified-play-services-measurement-api-20.0.0\AndroidManifest.xml:31:17-139
+62-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:77:13-79:85
+63                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+63-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:78:17-109
 64                android:value="com.google.firebase.components.ComponentRegistrar" />
-64-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\0ef913d10470ceaf4bc18c2c16721b45\transformed\jetified-play-services-measurement-api-20.0.0\AndroidManifest.xml:32:17-82
+64-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:79:17-82
 65            <meta-data
-65-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\a844cd1cfb8e0f3354c1720799017d59\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:18:13-20:85
-66                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-66-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\a844cd1cfb8e0f3354c1720799017d59\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:19:17-127
+65-->[com.google.firebase:firebase-database:20.0.2] C:\Users\luoli\.gradle\caches\transforms-3\197c67f98e66eda675e774bd0047ba5e\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:32:13-34:85
+66                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+66-->[com.google.firebase:firebase-database:20.0.2] C:\Users\luoli\.gradle\caches\transforms-3\197c67f98e66eda675e774bd0047ba5e\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:33:17-109
 67                android:value="com.google.firebase.components.ComponentRegistrar" />
-67-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\a844cd1cfb8e0f3354c1720799017d59\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:20:17-82
-68        </service>
-69
-70        <activity
-70-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:27:9-44:20
-71            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-71-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:28:13-80
-72            android:excludeFromRecents="true"
-72-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:29:13-46
-73            android:exported="true"
-73-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:30:13-36
-74            android:launchMode="singleTask"
-74-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:31:13-44
-75            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-75-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:32:13-72
-76            <intent-filter>
-76-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:33:13-43:29
-77                <action android:name="android.intent.action.VIEW" />
-77-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:17-69
-77-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:25-66
-78
-79                <category android:name="android.intent.category.DEFAULT" />
-79-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
-79-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
-80                <category android:name="android.intent.category.BROWSABLE" />
-80-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:17-78
-80-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:27-75
-81
-82                <data
-82-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:39:17-42:51
-83                    android:host="firebase.auth"
-83-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:40:21-49
-84                    android:path="/"
-84-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:41:21-37
-85                    android:scheme="genericidp" />
-85-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:42:21-48
-86            </intent-filter>
-87        </activity>
-88        <activity
-88-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:45:9-62:20
-89            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-89-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:46:13-79
-90            android:excludeFromRecents="true"
-90-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:47:13-46
-91            android:exported="true"
-91-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:48:13-36
-92            android:launchMode="singleTask"
-92-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:49:13-44
-93            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-93-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:50:13-72
-94            <intent-filter>
-94-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:51:13-61:29
-95                <action android:name="android.intent.action.VIEW" />
-95-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:17-69
-95-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:25-66
-96
-97                <category android:name="android.intent.category.DEFAULT" />
-97-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
-97-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
-98                <category android:name="android.intent.category.BROWSABLE" />
-98-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:17-78
-98-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:27-75
-99
-100                <data
-100-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:39:17-42:51
-101                    android:host="firebase.auth"
-101-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:40:21-49
-102                    android:path="/"
-102-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:41:21-37
-103                    android:scheme="recaptcha" />
-103-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:42:21-48
-104            </intent-filter>
-105        </activity>
-106
-107        <service
-107-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:64:9-73:19
-108            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
-108-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:65:13-101
-109            android:enabled="true"
-109-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:66:13-35
-110            android:exported="false" >
-110-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:67:13-37
-111            <intent-filter>
-111-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:68:13-72:29
-112                <action android:name="com.google.firebase.auth.api.gms.service.START" />
-112-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:69:17-89
-112-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:69:25-86
-113
-114                <category android:name="android.intent.category.DEFAULT" />
-114-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
-114-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
-115            </intent-filter>
-116        </service> <!-- Needs to be explicitly declared on P+ -->
-117        <uses-library
-117-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\ff3b2ac0f81edf7ccf8c3eeca5eabaaf\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:39:9-41:40
-118            android:name="org.apache.http.legacy"
-118-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\ff3b2ac0f81edf7ccf8c3eeca5eabaaf\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:40:13-50
-119            android:required="false" />
-119-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\ff3b2ac0f81edf7ccf8c3eeca5eabaaf\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:41:13-37
-120
-121        <provider
-121-->[com.google.firebase:firebase-common:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\45b4a080f8d120803c4464eae4da744b\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
-122            android:name="com.google.firebase.provider.FirebaseInitProvider"
-122-->[com.google.firebase:firebase-common:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\45b4a080f8d120803c4464eae4da744b\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
-123            android:authorities="com.example.moody.firebaseinitprovider"
-123-->[com.google.firebase:firebase-common:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\45b4a080f8d120803c4464eae4da744b\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
-124            android:directBootAware="true"
-124-->[com.google.firebase:firebase-common:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\45b4a080f8d120803c4464eae4da744b\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
-125            android:exported="false"
-125-->[com.google.firebase:firebase-common:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\45b4a080f8d120803c4464eae4da744b\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
-126            android:initOrder="100" />
-126-->[com.google.firebase:firebase-common:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\45b4a080f8d120803c4464eae4da744b\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
-127
-128        <activity
-128-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\61327252b97b04f60e697e9245a0fce3\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
-129            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-129-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\61327252b97b04f60e697e9245a0fce3\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
-130            android:exported="false"
-130-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\61327252b97b04f60e697e9245a0fce3\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
-131            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-131-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\61327252b97b04f60e697e9245a0fce3\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
-132
-133        <receiver
-133-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\8edd119f172d33bf3b4bd2b9e7d7aae4\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:29:9-33:20
-134            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-134-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\8edd119f172d33bf3b4bd2b9e7d7aae4\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:30:13-85
-135            android:enabled="true"
-135-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\8edd119f172d33bf3b4bd2b9e7d7aae4\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:31:13-35
-136            android:exported="false" >
-136-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\8edd119f172d33bf3b4bd2b9e7d7aae4\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:32:13-37
-137        </receiver>
+67-->[com.google.firebase:firebase-database:20.0.2] C:\Users\luoli\.gradle\caches\transforms-3\197c67f98e66eda675e774bd0047ba5e\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:34:17-82
+68            <meta-data
+68-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\8f99fc24535455265a5c32f9da3a7c53\transformed\jetified-play-services-measurement-api-20.0.0\AndroidManifest.xml:30:13-32:85
+69                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+69-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\8f99fc24535455265a5c32f9da3a7c53\transformed\jetified-play-services-measurement-api-20.0.0\AndroidManifest.xml:31:17-139
+70                android:value="com.google.firebase.components.ComponentRegistrar" />
+70-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\8f99fc24535455265a5c32f9da3a7c53\transformed\jetified-play-services-measurement-api-20.0.0\AndroidManifest.xml:32:17-82
+71            <meta-data
+71-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\luoli\.gradle\caches\transforms-3\355f87c917c954f6a13ab0a9273fadd3\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:18:13-20:85
+72                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+72-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\luoli\.gradle\caches\transforms-3\355f87c917c954f6a13ab0a9273fadd3\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:19:17-127
+73                android:value="com.google.firebase.components.ComponentRegistrar" />
+73-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\luoli\.gradle\caches\transforms-3\355f87c917c954f6a13ab0a9273fadd3\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:20:17-82
+74        </service>
+75
+76        <activity
+76-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:27:9-44:20
+77            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+77-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:28:13-80
+78            android:excludeFromRecents="true"
+78-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:29:13-46
+79            android:exported="true"
+79-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:30:13-36
+80            android:launchMode="singleTask"
+80-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:31:13-44
+81            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+81-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:32:13-72
+82            <intent-filter>
+82-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:33:13-43:29
+83                <action android:name="android.intent.action.VIEW" />
+83-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:17-69
+83-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:25-66
+84
+85                <category android:name="android.intent.category.DEFAULT" />
+85-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
+85-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
+86                <category android:name="android.intent.category.BROWSABLE" />
+86-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:17-78
+86-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:27-75
+87
+88                <data
+88-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:39:17-42:51
+89                    android:host="firebase.auth"
+89-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:40:21-49
+90                    android:path="/"
+90-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:41:21-37
+91                    android:scheme="genericidp" />
+91-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:42:21-48
+92            </intent-filter>
+93        </activity>
+94        <activity
+94-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:45:9-62:20
+95            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+95-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:46:13-79
+96            android:excludeFromRecents="true"
+96-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:47:13-46
+97            android:exported="true"
+97-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:48:13-36
+98            android:launchMode="singleTask"
+98-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:49:13-44
+99            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+99-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:50:13-72
+100            <intent-filter>
+100-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:51:13-61:29
+101                <action android:name="android.intent.action.VIEW" />
+101-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:17-69
+101-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:25-66
+102
+103                <category android:name="android.intent.category.DEFAULT" />
+103-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
+103-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
+104                <category android:name="android.intent.category.BROWSABLE" />
+104-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:17-78
+104-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:27-75
+105
+106                <data
+106-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:39:17-42:51
+107                    android:host="firebase.auth"
+107-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:40:21-49
+108                    android:path="/"
+108-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:41:21-37
+109                    android:scheme="recaptcha" />
+109-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:42:21-48
+110            </intent-filter>
+111        </activity>
+112
+113        <service
+113-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:64:9-73:19
+114            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
+114-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:65:13-101
+115            android:enabled="true"
+115-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:66:13-35
+116            android:exported="false" >
+116-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:67:13-37
+117            <intent-filter>
+117-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:68:13-72:29
+118                <action android:name="com.google.firebase.auth.api.gms.service.START" />
+118-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:69:17-89
+118-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:69:25-86
+119
+120                <category android:name="android.intent.category.DEFAULT" />
+120-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
+120-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\luoli\.gradle\caches\transforms-3\788ceb7a4e334c0a74f51954dca570cd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
+121            </intent-filter>
+122        </service> <!-- Needs to be explicitly declared on P+ -->
+123        <uses-library
+123-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\.gradle\caches\transforms-3\4225dab228527237dd316e71a6b09098\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:39:9-41:40
+124            android:name="org.apache.http.legacy"
+124-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\.gradle\caches\transforms-3\4225dab228527237dd316e71a6b09098\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:40:13-50
+125            android:required="false" />
+125-->[com.google.android.gms:play-services-maps:18.0.0] C:\Users\luoli\.gradle\caches\transforms-3\4225dab228527237dd316e71a6b09098\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:41:13-37
+126
+127        <provider
+127-->[com.google.firebase:firebase-common:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\f667b5fec82f1bcb67a523ac0134908f\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+128            android:name="com.google.firebase.provider.FirebaseInitProvider"
+128-->[com.google.firebase:firebase-common:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\f667b5fec82f1bcb67a523ac0134908f\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+129            android:authorities="com.example.moody.firebaseinitprovider"
+129-->[com.google.firebase:firebase-common:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\f667b5fec82f1bcb67a523ac0134908f\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+130            android:directBootAware="true"
+130-->[com.google.firebase:firebase-common:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\f667b5fec82f1bcb67a523ac0134908f\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+131            android:exported="false"
+131-->[com.google.firebase:firebase-common:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\f667b5fec82f1bcb67a523ac0134908f\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+132            android:initOrder="100" />
+132-->[com.google.firebase:firebase-common:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\f667b5fec82f1bcb67a523ac0134908f\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
+133
+134        <activity
+134-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\luoli\.gradle\caches\transforms-3\5be80a2e875ec7e37f8de9daf917fcb1\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+135            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+135-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\luoli\.gradle\caches\transforms-3\5be80a2e875ec7e37f8de9daf917fcb1\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+136            android:exported="false"
+136-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\luoli\.gradle\caches\transforms-3\5be80a2e875ec7e37f8de9daf917fcb1\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+137            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+137-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\luoli\.gradle\caches\transforms-3\5be80a2e875ec7e37f8de9daf917fcb1\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
 138
-139        <service
-139-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\8edd119f172d33bf3b4bd2b9e7d7aae4\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:35:9-38:40
-140            android:name="com.google.android.gms.measurement.AppMeasurementService"
-140-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\8edd119f172d33bf3b4bd2b9e7d7aae4\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:36:13-84
+139        <receiver
+139-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\806f1c8febbf76074e41d663c10ba6ef\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:29:9-33:20
+140            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+140-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\806f1c8febbf76074e41d663c10ba6ef\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:30:13-85
 141            android:enabled="true"
-141-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\8edd119f172d33bf3b4bd2b9e7d7aae4\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:37:13-35
-142            android:exported="false" />
-142-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\8edd119f172d33bf3b4bd2b9e7d7aae4\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:38:13-37
-143        <service
-143-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\8edd119f172d33bf3b4bd2b9e7d7aae4\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:39:9-43:72
-144            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-144-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\8edd119f172d33bf3b4bd2b9e7d7aae4\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:40:13-87
-145            android:enabled="true"
-145-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\8edd119f172d33bf3b4bd2b9e7d7aae4\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:41:13-35
-146            android:exported="false"
-146-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\8edd119f172d33bf3b4bd2b9e7d7aae4\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:42:13-37
-147            android:permission="android.permission.BIND_JOB_SERVICE" />
-147-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\8edd119f172d33bf3b4bd2b9e7d7aae4\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:43:13-69
-148
-149        <meta-data
-149-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\2f60e652d28c97ee83adc81cc294019c\transformed\jetified-play-services-basement-17.1.0\AndroidManifest.xml:23:9-25:69
-150            android:name="com.google.android.gms.version"
-150-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\2f60e652d28c97ee83adc81cc294019c\transformed\jetified-play-services-basement-17.1.0\AndroidManifest.xml:24:13-58
-151            android:value="@integer/google_play_services_version" />
-151-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\luoli\Desktop\2021fall\cs506\spike exercise\Spike-Exercise-Team-Moody\gradle\caches\transforms-3\2f60e652d28c97ee83adc81cc294019c\transformed\jetified-play-services-basement-17.1.0\AndroidManifest.xml:25:13-66
-152    </application>
-153
-154</manifest>
+141-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\806f1c8febbf76074e41d663c10ba6ef\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:31:13-35
+142            android:exported="false" >
+142-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\806f1c8febbf76074e41d663c10ba6ef\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:32:13-37
+143        </receiver>
+144
+145        <service
+145-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\806f1c8febbf76074e41d663c10ba6ef\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:35:9-38:40
+146            android:name="com.google.android.gms.measurement.AppMeasurementService"
+146-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\806f1c8febbf76074e41d663c10ba6ef\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:36:13-84
+147            android:enabled="true"
+147-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\806f1c8febbf76074e41d663c10ba6ef\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:37:13-35
+148            android:exported="false" />
+148-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\806f1c8febbf76074e41d663c10ba6ef\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:38:13-37
+149        <service
+149-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\806f1c8febbf76074e41d663c10ba6ef\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:39:9-43:72
+150            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+150-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\806f1c8febbf76074e41d663c10ba6ef\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:40:13-87
+151            android:enabled="true"
+151-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\806f1c8febbf76074e41d663c10ba6ef\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:41:13-35
+152            android:exported="false"
+152-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\806f1c8febbf76074e41d663c10ba6ef\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:42:13-37
+153            android:permission="android.permission.BIND_JOB_SERVICE" />
+153-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\luoli\.gradle\caches\transforms-3\806f1c8febbf76074e41d663c10ba6ef\transformed\jetified-play-services-measurement-20.0.0\AndroidManifest.xml:43:13-69
+154
+155        <meta-data
+155-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\luoli\.gradle\caches\transforms-3\1b3fc80a110b0127bf379d602fea296b\transformed\jetified-play-services-basement-17.1.0\AndroidManifest.xml:23:9-25:69
+156            android:name="com.google.android.gms.version"
+156-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\luoli\.gradle\caches\transforms-3\1b3fc80a110b0127bf379d602fea296b\transformed\jetified-play-services-basement-17.1.0\AndroidManifest.xml:24:13-58
+157            android:value="@integer/google_play_services_version" />
+157-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\luoli\.gradle\caches\transforms-3\1b3fc80a110b0127bf379d602fea296b\transformed\jetified-play-services-basement-17.1.0\AndroidManifest.xml:25:13-66
+158
+159        <provider
+159-->[androidx.emoji2:emoji2:1.0.0] C:\Users\luoli\.gradle\caches\transforms-3\fca9fa53aea557c05a14c601ab0b2b58\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+160            android:name="androidx.startup.InitializationProvider"
+160-->[androidx.emoji2:emoji2:1.0.0] C:\Users\luoli\.gradle\caches\transforms-3\fca9fa53aea557c05a14c601ab0b2b58\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+161            android:authorities="com.example.moody.androidx-startup"
+161-->[androidx.emoji2:emoji2:1.0.0] C:\Users\luoli\.gradle\caches\transforms-3\fca9fa53aea557c05a14c601ab0b2b58\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+162            android:exported="false" >
+162-->[androidx.emoji2:emoji2:1.0.0] C:\Users\luoli\.gradle\caches\transforms-3\fca9fa53aea557c05a14c601ab0b2b58\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+163            <meta-data
+163-->[androidx.emoji2:emoji2:1.0.0] C:\Users\luoli\.gradle\caches\transforms-3\fca9fa53aea557c05a14c601ab0b2b58\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+164                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+164-->[androidx.emoji2:emoji2:1.0.0] C:\Users\luoli\.gradle\caches\transforms-3\fca9fa53aea557c05a14c601ab0b2b58\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+165                android:value="androidx.startup" />
+165-->[androidx.emoji2:emoji2:1.0.0] C:\Users\luoli\.gradle\caches\transforms-3\fca9fa53aea557c05a14c601ab0b2b58\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+166            <meta-data
+166-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\luoli\.gradle\caches\transforms-3\7a1ac7526599bbc6bc7a852721d1348a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+167                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+167-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\luoli\.gradle\caches\transforms-3\7a1ac7526599bbc6bc7a852721d1348a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+168                android:value="androidx.startup" />
+168-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\luoli\.gradle\caches\transforms-3\7a1ac7526599bbc6bc7a852721d1348a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+169        </provider>
+170    </application>
+171
+172</manifest>

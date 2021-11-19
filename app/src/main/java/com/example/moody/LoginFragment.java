@@ -20,6 +20,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginFragment extends Fragment {
     private Button login_button;
@@ -56,6 +58,9 @@ public class LoginFragment extends Fragment {
                 login();
             }
         });
+
+
+
         return view;
     }
 
@@ -98,7 +103,7 @@ public class LoginFragment extends Fragment {
                     manager.beginTransaction().replace(R.id.fragment_container, homeFragment, homeFragment.getTag()).commit();
                 }else{
                     Toast.makeText(getActivity(), "Failed to login! Please check your credentials", Toast.LENGTH_LONG).show();
-
+                    progressBar.setVisibility(getView().GONE);
                 }
             }
         });

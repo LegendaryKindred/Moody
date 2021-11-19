@@ -8,6 +8,9 @@ com/example/moody/ProfileEditFragment.java
  com.example.moody.ProfileEditFragment
  com.example.moody.ProfileEditFragment$1
  com.example.moody.ProfileEditFragment$2
+ com.example.moody.ProfileEditFragment$3
+ com.example.moody.ProfileEditFragment$4
+ com.example.moody.ProfileEditFragment$5
 com/example/moody/GroupChatFragment.java
  com.example.moody.GroupChatFragment
 com/example/moody/FindNewFriendsFragment.java
@@ -17,6 +20,8 @@ com/example/moody/MyFriendsFragment.java
 com/example/moody/ProfileFragment.java
  com.example.moody.ProfileFragment
  com.example.moody.ProfileFragment$1
+ com.example.moody.ProfileFragment$2
+ com.example.moody.ProfileFragment$3
 com/example/moody/MainActivity.java
  com.example.moody.MainActivity
 com/example/moody/BuildConfig.java

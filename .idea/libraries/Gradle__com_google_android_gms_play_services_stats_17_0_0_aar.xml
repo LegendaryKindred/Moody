@@ -1,9 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-stats:17.0.0@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../spike exercise/Spike-Exercise-Team-Moody/gradle/caches/transforms-3/bf0e5be2490e30157c95bb03044cdfeb/transformed/jetified-play-services-stats-17.0.0/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../spike exercise/Spike-Exercise-Team-Moody/gradle/caches/transforms-3/bf0e5be2490e30157c95bb03044cdfeb/transformed/jetified-play-services-stats-17.0.0/res" />
-      <root url="file://$PROJECT_DIR$/../spike exercise/Spike-Exercise-Team-Moody/gradle/caches/transforms-3/bf0e5be2490e30157c95bb03044cdfeb/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bf0e5be2490e30157c95bb03044cdfeb/transformed/jetified-play-services-stats-17.0.0/res" />
+      <root url="file://$PROJECT_DIR$/../../spike exercise/Spike-Exercise-Team-Moody/gradle/caches/transforms-3/bf0e5be2490e30157c95bb03044cdfeb/transformed/jetified-play-services-stats-17.0.0/res" />
+      <root url="jar://$PROJECT_DIR$/../../spike exercise/Spike-Exercise-Team-Moody/gradle/caches/transforms-3/fc8ebfca28c9f2435e23913bc7bc3003/transformed/jetified-play-services-stats-17.0.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../spike exercise/Spike-Exercise-Team-Moody/gradle/caches/transforms-3/fc8ebfca28c9f2435e23913bc7bc3003/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../spike exercise/Spike-Exercise-Team-Moody/gradle/caches/transforms-3/fc8ebfca28c9f2435e23913bc7bc3003/transformed/jetified-play-services-stats-17.0.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
