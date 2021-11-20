@@ -9,11 +9,15 @@
     android:background="@color/mint"
     >
 
+
     <androidx.recyclerview.widget.RecyclerView
-        android:padding="25dp"
         android:id="@+id/notificationList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:padding="25dp"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="93dp" />
+
+
 
 </LinearLayout>

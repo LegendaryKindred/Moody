@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -25,6 +27,7 @@ public class ProfileEditFragment extends Fragment{
     EditText firstname,lastname,username,password;
     String r_email="ryang96@wisc.edu";
     String r_password="t356920319qwe";
+    Switch profilestatus;
 
     @Nullable
     @Override
@@ -36,6 +39,18 @@ public class ProfileEditFragment extends Fragment{
         username=view.findViewById(R.id.username);
         password=view.findViewById(R.id.password);
         done=view.findViewById(R.id.done);
+        profilestatus = (Switch) view.findViewById(R.id.profilestatus);
+        profilestatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b==true){
+                    profilestatus.setText("Private");
+                }
+                else{
+                    profilestatus.setText("Public");
+                }
+            }
+        });
 
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
