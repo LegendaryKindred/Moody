@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <entry key="..\:/Users/XIAN WANG/Desktop/Moody/Moody/app/src/main/res/drawable/timeline_icon.xml" value="0.3546875" />
         <entry key="..\:/Users/XIAN WANG/Desktop/Moody/Moody/app/src/main/res/layout/activity_main.xml" value="0.334375" />
         <entry key="..\:/Users/XIAN WANG/Desktop/Moody/Moody/app/src/main/res/layout/login_fragment.xml" value="0.334375" />
@@ -19,10 +20,19 @@
         <entry key="app/src/main/res/layout/profile_edit_fragment.xml" value="0.18796296296296297" />
         <entry key="app/src/main/res/layout/profile_fragment.xml" value="0.1" />
 =======
+=======
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/drawable/add.xml" value="0.1953125" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/drawable/add_btn.xml" value="0.1953125" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/drawable/background_chat_input.xml" value="0.1953125" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/drawable/background_content_top.xml" value="0.1953125" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/drawable/background_recieved_message.xml" value="0.1953125" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/drawable/background_sent_message.xml" value="0.1953125" />
+>>>>>>> 080659f (chat pages)
         <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/drawable/input.xml" value="0.1953125" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/drawable/login_btn.xml" value="0.1953125" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/drawable/profile_icon.xml" value="0.1953125" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/drawable/spinner.xml" value="0.1953125" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/layout/activity_chat.xml" value="0.17028985507246377" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/layout/activity_main.xml" value="0.13949275362318841" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/layout/activity_splash_screen.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/layout/birthday_spinner.xml" value="0.1693840579710145" />
@@ -33,6 +43,8 @@
         <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/layout/friend_request_items.xml" value="0.22" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/layout/group_chat_fragment.xml" value="0.1693840579710145" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/layout/home_fragment.xml" value="0.17300724637681159" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/layout/item_container_received_message.xml" value="0.22" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/layout/item_container_sent_message.xml" value="0.17028985507246377" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/layout/login_fragment.xml" value="0.1693840579710145" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/layout/my_friends_fragment.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/Moody/app/src/main/res/layout/myfriendlist_items.xml" value="0.17916666666666667" />

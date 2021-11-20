@@ -43,20 +43,20 @@ public class FriendRequestFragment extends Fragment {
     private void initData() {
         friendRequest = new ArrayList<>();
 
-        friendRequest.add(new ModelClassFriendRequest(R.drawable.profile_icon, "James", R.drawable.add, R.drawable.block));
-        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "John", R.drawable.add, R.drawable.block));
-        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Jannah", R.drawable.add, R.drawable.block));
-        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Hollie", R.drawable.add, R.drawable.block));
-        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Susan", R.drawable.add, R.drawable.block));
-        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Ross", R.drawable.add, R.drawable.block));
-        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Rachel", R.drawable.add, R.drawable.block));
-        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Cooper", R.drawable.add, R.drawable.block));
-        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Gabi", R.drawable.add, R.drawable.block));
-        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Hannah", R.drawable.add, R.drawable.block));
-        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Yolanda", R.drawable.add, R.drawable.block));
-        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Josh", R.drawable.add, R.drawable.block));
-        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Crystal", R.drawable.add, R.drawable.block));
-        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Fallon", R.drawable.add, R.drawable.block));
+        friendRequest.add(new ModelClassFriendRequest(R.drawable.profile_icon, "James", R.drawable.add_btn, R.drawable.block));
+        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "John", R.drawable.add_btn, R.drawable.block));
+        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Jannah", R.drawable.add_btn, R.drawable.block));
+        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Hollie", R.drawable.add_btn, R.drawable.block));
+        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Susan", R.drawable.add_btn, R.drawable.block));
+        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Ross", R.drawable.add_btn, R.drawable.block));
+        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Rachel", R.drawable.add_btn, R.drawable.block));
+        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Cooper", R.drawable.add_btn, R.drawable.block));
+        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Gabi", R.drawable.add_btn, R.drawable.block));
+        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Hannah", R.drawable.add_btn, R.drawable.block));
+        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Yolanda", R.drawable.add_btn, R.drawable.block));
+        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Josh", R.drawable.add_btn, R.drawable.block));
+        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Crystal", R.drawable.add_btn, R.drawable.block));
+        friendRequest.add(new ModelClassFriendRequest(R.drawable.img, "Fallon", R.drawable.add_btn, R.drawable.block));
 
     }
 }
