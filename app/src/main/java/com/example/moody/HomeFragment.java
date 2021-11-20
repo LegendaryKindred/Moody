@@ -31,7 +31,7 @@ public class HomeFragment extends Fragment {
                 //when map is loaded
                 LatLng madison = new LatLng(43.0730517,-89.4012302);
                 map = googleMap;
-                map.addMarker(new MarkerOptions().position(madison).title("madison"));
+                //map.addMarker(new MarkerOptions().position(madison).title("madison"));
                 map.moveCamera(CameraUpdateFactory.newLatLng(madison));
                 map.setMinZoomPreference(12);
 

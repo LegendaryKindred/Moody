@@ -10,12 +10,11 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/done"
+            android:id="@+id/editDone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="65dp"
             android:layout_marginBottom="35dp"
-            android:clickable="true"
             android:text="Done"
             android:textColor="@color/mint"
             android:textSize="20dp"
@@ -32,7 +31,7 @@
             android:layout_marginEnd="43dp"
             android:layout_marginBottom="35dp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-            app:layout_constraintEnd_toStartOf="@+id/done"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,7 +61,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/firstname"
+                android:id="@+id/editFirstName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Previous first name"
@@ -96,7 +95,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/lastname"
+                android:id="@+id/editLastName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="previous last name"
@@ -130,7 +129,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/editUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="previous username"
@@ -165,12 +164,12 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/editPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="numberPassword" />
+                android:inputType='textPassword' />
         </LinearLayout>
 
         <LinearLayout
@@ -204,7 +203,6 @@
                 android:layout_height="wrap_content"
                 android:text="Select Date"
                 android:textSize="20dp" />
-
 
 
         </LinearLayout>

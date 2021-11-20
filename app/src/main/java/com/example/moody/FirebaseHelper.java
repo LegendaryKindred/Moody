@@ -7,10 +7,7 @@ public class FirebaseHelper {
     private FirebaseDatabase mdb;
     private DatabaseReference mrf;
 
-    public FirebaseHelper(String reference){
-        mdb = FirebaseDatabase.getInstance();
-        mrf = mdb.getReference(reference);
+
+    public FirebaseHelper(){
     }
-
-
 }
