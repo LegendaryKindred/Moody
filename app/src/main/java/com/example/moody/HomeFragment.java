@@ -14,42 +14,32 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements OnMapReadyCallback {
     GoogleMap map;
+
+    public static HomeFragment newInstance() {
+        HomeFragment fragment = new HomeFragment();
+        return fragment;
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_fragment, container, false);
-
         //Google Map
         SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.googleMap);
-
         //Async Map
-        supportMapFragment.getMapAsync(new OnMapReadyCallback() {
-            @Override
-            public void onMapReady(@NonNull GoogleMap googleMap) {
-                //when map is loaded
-                LatLng madison = new LatLng(43.0730517,-89.4012302);
-                map = googleMap;
-                //map.addMarker(new MarkerOptions().position(madison).title("madison"));
-                map.moveCamera(CameraUpdateFactory.newLatLng(madison));
-                map.setMinZoomPreference(12);
-
-                googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener(){
-                    @Override
-                    public void onMapClick(@NonNull LatLng latLng) {
-                        //Marker
-                        MarkerOptions markerOptions = new MarkerOptions();
-                        //set position of marker
-                        markerOptions.position(latLng);
-                        googleMap.addMarker(markerOptions);
-                    }
-
-                });
-
-            }
-        });
+        supportMapFragment.getMapAsync(this);
 
         return view;
+    }
+
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        LatLng madison = new LatLng(43.0730517,-89.4012302);
+        map = googleMap;
+        //map.addMarker(new MarkerOptions().position(madison).title("madison"));
+        map.moveCamera(CameraUpdateFactory.newLatLng(madison));
+        map.setMinZoomPreference(12);
     }
 }
