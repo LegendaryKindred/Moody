@@ -1,15 +1,19 @@
 package com.example.moody;
 
-public class User {
-    public String firstName, lastName, username, email, password, phone;
+import java.util.ArrayList;
 
-    public User(String firstName, String lastName, String username, String email, String password, String phone) {
+public class User {
+    private String firstName, lastName, username, email, password, phone, friend;
+
+    public User(String firstName, String lastName, String username, String email, String password, String phone, String friend) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
         this.email = email;
         this.password = password;
         this.phone = phone;
+        this.friend = friend;
+
     }
 
     public String getFirstName() {
@@ -46,6 +50,14 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+
+    public String getFriend() {
+        return friend;
+    }
+
+    public void setFriend(String friend) {
+        this.friend = friend;
     }
 
     public void setPassword(String password) {

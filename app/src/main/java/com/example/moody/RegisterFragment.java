@@ -20,6 +20,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+
 public class RegisterFragment extends Fragment {
     private FirebaseAuth mAuth;
 
@@ -62,6 +64,7 @@ public class RegisterFragment extends Fragment {
         String email = editEmail.getText().toString().trim();
         String password = editPassword.getText().toString().trim();
         String phone = editPhone.getText().toString().trim();
+        String friend = editEmail.getText().toString().trim();
 
         if(firstName.isEmpty()){
             editFirstName.setError("First Name is required!");
@@ -111,13 +114,14 @@ public class RegisterFragment extends Fragment {
             return;
         }
 
+
         progressBar.setVisibility(getView().VISIBLE);
         auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    User user = new User(firstName, lastName, username, email, password, phone);
+                    User user = new User(firstName, lastName, username, email, password, phone, friend);
                     FirebaseDatabase.getInstance().getReference("Users")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                             .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -132,6 +136,8 @@ public class RegisterFragment extends Fragment {
                             }
                         }
                     });
+
+
                 }else{
                     Toast.makeText(getActivity(), "Failed to register! Try again!2", Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(getView().GONE);
