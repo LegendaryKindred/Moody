@@ -45,20 +45,20 @@ public class FindNewFriendsFragment extends Fragment {
     private void initData() {
         newFriendList = new ArrayList<>();
 
-        newFriendList.add(new ModelClassNewFriends(R.drawable.profile_icon, "James", R.drawable.add_btn));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "John", R.drawable.add_btn));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Jannah", R.drawable.add_btn));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Hollie", R.drawable.add_btn));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Susan", R.drawable.add_btn));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Ross", R.drawable.add_btn));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Rachel", R.drawable.add_btn));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Cooper", R.drawable.add_btn));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Gabi", R.drawable.add_btn));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Hannah", R.drawable.add_btn));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Yolanda", R.drawable.add_btn));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Josh", R.drawable.add_btn));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Crystal", R.drawable.add_btn));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Fallon", R.drawable.add_btn));
+        newFriendList.add(new ModelClassNewFriends(R.drawable.profile_icon, "James", R.drawable.add));
+        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "John", R.drawable.add));
+        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Jannah", R.drawable.add));
+        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Hollie", R.drawable.add));
+        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Susan", R.drawable.add));
+        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Ross", R.drawable.add));
+        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Rachel", R.drawable.add));
+        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Cooper", R.drawable.add));
+        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Gabi", R.drawable.add));
+        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Hannah", R.drawable.add));
+        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Yolanda", R.drawable.add));
+        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Josh", R.drawable.add));
+        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Crystal", R.drawable.add));
+        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Fallon", R.drawable.add));
 
     }
 }
