@@ -4,8 +4,9 @@ import java.util.ArrayList;
 
 public class User {
     private String firstName, lastName, username, email, password, phone, friend;
+    private String status;
 
-    public User(String firstName, String lastName, String username, String email, String password, String phone, String friend) {
+    public User(String firstName, String lastName, String username, String email, String password, String phone, String friend, String status) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
@@ -13,7 +14,7 @@ public class User {
         this.password = password;
         this.phone = phone;
         this.friend = friend;
-
+        this.status = status;
     }
 
     public String getFirstName() {

@@ -64,7 +64,10 @@ public class RegisterFragment extends Fragment {
         String email = editEmail.getText().toString().trim();
         String password = editPassword.getText().toString().trim();
         String phone = editPhone.getText().toString().trim();
-        String friend = editEmail.getText().toString().trim();
+        String friend = "Notification";
+
+        // 0 is private, 1 is public
+        String status = "0";
 
         if(firstName.isEmpty()){
             editFirstName.setError("First Name is required!");
@@ -121,7 +124,7 @@ public class RegisterFragment extends Fragment {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    User user = new User(firstName, lastName, username, email, password, phone, friend);
+                    User user = new User(firstName, lastName, username, email, password, phone, friend, status);
                     FirebaseDatabase.getInstance().getReference("Users")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                             .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
