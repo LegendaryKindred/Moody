@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -64,10 +65,9 @@ public class RegisterFragment extends Fragment {
         String email = editEmail.getText().toString().trim();
         String password = editPassword.getText().toString().trim();
         String phone = editPhone.getText().toString().trim();
-        String friend = "Notification";
-
-        // 0 is private, 1 is public
-        String status = "0";
+        String friend = "System-Notification";
+        String birthday = "00/00/0000";
+        String status = "Private";
 
         if(firstName.isEmpty()){
             editFirstName.setError("First Name is required!");
@@ -124,7 +124,7 @@ public class RegisterFragment extends Fragment {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    User user = new User(firstName, lastName, username, email, password, phone, friend, status);
+                    User user = new User(firstName, lastName, username, email, password, phone, friend, status, birthday);
                     FirebaseDatabase.getInstance().getReference("Users")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                             .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -132,6 +132,9 @@ public class RegisterFragment extends Fragment {
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
                                 Toast.makeText(getActivity(), "User has been registered successfully!", Toast.LENGTH_LONG).show();
+                                LoginFragment loginFragment = new LoginFragment();
+                                FragmentManager manager = getActivity().getSupportFragmentManager();
+                                manager.beginTransaction().replace(R.id.fragment_container, loginFragment , loginFragment.getTag()).commit();
                                 progressBar.setVisibility(getView().GONE);
                             }else{
                                 Toast.makeText(getActivity(), "Failed to register! Try again!1", Toast.LENGTH_LONG).show();
