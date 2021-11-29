@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,23 +14,48 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class FindNewFriendsFragment extends Fragment {
+    EditText friendSearchET;
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     LinearLayoutManager layoutManager;
     List<ModelClassNewFriends> newFriendList;
+    Button searchButton;
+    String searchString;
+    FirebaseUser cu;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.find_new_friends_fragment, container, false);
-
-        initData();
+        cu = FirebaseAuth.getInstance().getCurrentUser();
+//        initData();
+        newFriendList = new ArrayList<>();
+        friendSearchET = view.findViewById(R.id.friendSearchEditText);
+        searchButton = view.findViewById(R.id.friendSearchButton);
         recyclerView = view.findViewById(R.id.newFriendList);
+
+
+
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                searchString = friendSearchET.getText().toString().trim();
+                FirebaseHelper helper = new FirebaseHelper(cu);
+                ArrayList<User> r = helper.searchFriend(searchString);
+                for (User u: r) {
+                    newFriendList.add(new ModelClassNewFriends(R.drawable.img, u.getEmail(), R.drawable.add));
+                }
+            }
+        });
+
         layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
 
@@ -42,23 +69,23 @@ public class FindNewFriendsFragment extends Fragment {
     }
 
     // hardcode to check if list shows
-    private void initData() {
-        newFriendList = new ArrayList<>();
+//    private void initData() {
+//        newFriendList = new ArrayList<>();
 
-        newFriendList.add(new ModelClassNewFriends(R.drawable.profile_icon, "James", R.drawable.add));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "John", R.drawable.add));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Jannah", R.drawable.add));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Hollie", R.drawable.add));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Susan", R.drawable.add));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Ross", R.drawable.add));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Rachel", R.drawable.add));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Cooper", R.drawable.add));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Gabi", R.drawable.add));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Hannah", R.drawable.add));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Yolanda", R.drawable.add));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Josh", R.drawable.add));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Crystal", R.drawable.add));
-        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Fallon", R.drawable.add));
+//        newFriendList.add(new ModelClassNewFriends(R.drawable.profile_icon, "James", R.drawable.add));
+//        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "John", R.drawable.add));
+//        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Jannah", R.drawable.add));
+//        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Hollie", R.drawable.add));
+//        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Susan", R.drawable.add));
+//        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Ross", R.drawable.add));
+//        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Rachel", R.drawable.add));
+//        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Cooper", R.drawable.add));
+//        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Gabi", R.drawable.add));
+//        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Hannah", R.drawable.add));
+//        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Yolanda", R.drawable.add));
+//        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Josh", R.drawable.add));
+//        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Crystal", R.drawable.add));
+//        newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Fallon", R.drawable.add));
 
-    }
+//    }
 }

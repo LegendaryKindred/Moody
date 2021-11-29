@@ -8,8 +8,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -101,5 +103,28 @@ public class FirebaseHelper {
 
     public ArrayList<String> getFriendList(String friendString){
         return new ArrayList<String>(Arrays.asList(friendString.split("/")));
+    }
+
+    public ArrayList<User> searchFriend(String searchString){
+        ArrayList<User> result = new ArrayList<User>();
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+        ref.child("Users").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Iterable<DataSnapshot> users = snapshot.getChildren();
+
+                for (DataSnapshot user: users) {
+                    User u = user.getValue(User.class);
+
+                    if(u.getEmail().contains(searchString)){
+                        result.add(u);
+                    }
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+        return result;
     }
 }
