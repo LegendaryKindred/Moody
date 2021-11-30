@@ -48,6 +48,10 @@ public class FirebaseHelper {
         return result[0];
     }
 
+//    //find user
+//    public FirebaseUser searchUser(String email){
+//    }
+
     public boolean deleteFriend(FirebaseUser user , String email){
         ArrayList<String> friendList = getFriendList(getFriendString(user));
         String r = "";
