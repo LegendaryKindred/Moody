@@ -47,12 +47,12 @@ public class HomeFragment extends Fragment {
                             public void onMapReady(@NonNull GoogleMap googleMap) {
                                 //Initialize lat lng
                                 LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-
+                                LatLng madison = new LatLng(43.0730517,-89.4012302);
                                 //create maker options
-                                MarkerOptions options = new MarkerOptions().position(latLng).title("You are here");
+                                MarkerOptions options = new MarkerOptions().position(madison).title("You are here");
 
                                 //zoom map
-                                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
+                                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(madison, 10));
 
                                 // add marker on map
                                 googleMap.addMarker(options);
