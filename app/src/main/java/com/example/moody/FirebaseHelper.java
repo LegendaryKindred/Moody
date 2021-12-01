@@ -109,26 +109,30 @@ public class FirebaseHelper {
         return new ArrayList<String>(Arrays.asList(friendString.split("/")));
     }
 
-    public ArrayList<User> searchFriend(String searchString){
-        ArrayList<User> result = new ArrayList<User>();
+    public List<String> searchFriend(String searchString){
+        List<String> result = new ArrayList<String>();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
-        ref.child("Users").addValueEventListener(new ValueEventListener() {
+        ref.child("Users").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Iterable<DataSnapshot> users = snapshot.getChildren();
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if(task.isSuccessful()){
+                    DataSnapshot snapshot = task.getResult();
+                    Iterable<DataSnapshot> users = snapshot.getChildren();
 
-                for (DataSnapshot user: users) {
-                    User u = user.getValue(User.class);
+                    for (DataSnapshot user: users) {
+                        User u = user.getValue(User.class);
 
-                    if(u.getEmail().contains(searchString)){
-                        result.add(u);
+                        if(u.getEmail().contains(searchString)){
+                            System.out.println(u.getEmail());
+                            result.add(u.getEmail());
+                        }
+
                     }
                 }
             }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
         });
+
+        System.out.println(result.toString() + "search function");
         return result;
     }
 }

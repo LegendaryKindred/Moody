@@ -14,8 +14,13 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,11 +53,23 @@ public class FindNewFriendsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 searchString = friendSearchET.getText().toString().trim();
-                FirebaseHelper helper = new FirebaseHelper(cu);
-                ArrayList<User> r = helper.searchFriend(searchString);
-                for (User u: r) {
-                    newFriendList.add(new ModelClassNewFriends(R.drawable.img, u.getEmail(), R.drawable.add));
-                }
+                DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+                ref.child("Users").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if(task.isSuccessful()){
+                            DataSnapshot snapshot = task.getResult();
+                            Iterable<DataSnapshot> users = snapshot.getChildren();
+                            for (DataSnapshot user: users) {
+                                User u = user.getValue(User.class);
+
+                                if(u.getEmail().contains(searchString)){
+                                    newFriendList.add(new ModelClassNewFriends(R.drawable.img, u.getEmail(), R.drawable.add));
+                                }
+                            }
+                        }
+                    }
+                });
             }
         });
 
