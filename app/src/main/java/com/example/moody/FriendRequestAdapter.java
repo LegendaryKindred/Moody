@@ -60,10 +60,12 @@ public class FriendRequestAdapter extends RecyclerView.Adapter<FriendRequestAdap
             block = itemView.findViewById(R.id.friend_block);
 
             user = FirebaseAuth.getInstance().getCurrentUser();
+
             add.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
+                    FirebaseHelper helper = new FirebaseHelper(user);
+                    helper.addFriend(user, (String) friendName.getText());
                 }
             });
         }
