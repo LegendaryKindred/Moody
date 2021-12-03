@@ -7,18 +7,23 @@
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2552083333333333" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/drawable/input.xml" value="0.1421875" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/drawable/login_btn.xml" value="0.1421875" />
+        <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/activity_chat.xml" value="0.14447463768115942" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/activity_main.xml" value="0.1296875" />
+        <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/activity_splash_screen.xml" value="0.14447463768115942" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/find_new_friends_fragment.xml" value="0.1296875" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/fragment_friend_request.xml" value="0.1296875" />
+        <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/friend_request_items.xml" value="0.14447463768115942" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/group_chat_fragment.xml" value="0.13854166666666667" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/home_fragment.xml" value="0.1296875" />
+        <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/item_container_received_message.xml" value="0.14447463768115942" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/login_fragment.xml" value="0.1296875" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/my_friends_fragment.xml" value="0.13854166666666667" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/myfriendlist_items.xml" value="0.1296875" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/nav_header.xml" value="0.13854166666666667" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/new_friend_items.xml" value="0.1296875" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/noti_items.xml" value="0.1296875" />
-        <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/notification_fragment.xml" value="0.1296875" />
+        <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/notification_detail_fragment.xml" value="0.11510416666666666" />
+        <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/notification_fragment.xml" value="0.16" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/profile_edit_fragment.xml" value="0.23505434782608695" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/profile_fragment.xml" value="0.23505434782608695" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/register_fragment.xml" value="0.1296875" />
@@ -27,11 +32,6 @@
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/menu/drawer_menu.xml" value="0.24791666666666667" />
         <entry key="..\:/Users/XIAN WANG/Desktop/Moody/app/src/main/res/layout/login_fragment.xml" value="0.2223731884057971" />
         <entry key="..\:/Users/XIAN WANG/Desktop/Moody/app/src/main/res/layout/register_fragment.xml" value="0.2223731884057971" />
-        <entry key="..\:/Users/yang0/Moody/app/src/main/res/layout/find_new_friends_fragment.xml" value="0.32563405797101447" />
-        <entry key="..\:/Users/yang0/Moody/app/src/main/res/layout/fragment_friend_request.xml" value="0.32563405797101447" />
-        <entry key="..\:/Users/yang0/Moody/app/src/main/res/layout/fragment_my_friends_list.xml" value="0.32563405797101447" />
-        <entry key="..\:/Users/yang0/Moody/app/src/main/res/layout/friend_request_items.xml" value="0.32563405797101447" />
-        <entry key="..\:/Users/yang0/Moody/app/src/main/res/layout/new_friend_items.xml" value="0.32563405797101447" />
       </map>
     </option>
   </component>

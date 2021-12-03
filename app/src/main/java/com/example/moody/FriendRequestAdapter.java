@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.List;
 
 public class FriendRequestAdapter extends RecyclerView.Adapter<FriendRequestAdapter.ViewHolder> {
@@ -21,7 +23,6 @@ public class FriendRequestAdapter extends RecyclerView.Adapter<FriendRequestAdap
     private List<ModelClassFriendRequest> friendRequests;
 
     public FriendRequestAdapter(List<ModelClassFriendRequest>friendRequests){this.friendRequests = friendRequests;}
-
 
     @NonNull
     @Override

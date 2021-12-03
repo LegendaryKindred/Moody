@@ -31,7 +31,7 @@
             android:layout_marginEnd="43dp"
             android:layout_marginBottom="35dp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintEnd_toStartOf="@+id/editDone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Previous first name"
                 android:paddingLeft="20dp"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:hint="previous last name"
                 android:paddingLeft="20dp"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -134,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:hint="previous username"
                 android:paddingLeft="20dp"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
         </LinearLayout>
 
 
@@ -202,7 +202,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Select Date"
-                android:textSize="20dp" />
+                android:paddingLeft="15dp"
+                android:textSize="20dp"
+                />
 
 
         </LinearLayout>
@@ -246,13 +248,13 @@
                 android:textSize="20dp" />
 
             <Switch
-                android:id="@+id/statusSwitch"
+                android:id="@+id/profilestatus"
                 android:layout_width="39dp"
                 android:layout_height="46dp"
                 android:layout_weight="1"
-                android:paddingLeft="10dp" />
-
-
+                android:paddingLeft="10dp"
+                android:textSize="15dp"
+                android:text="Public" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -44,7 +44,6 @@ public class FindNewFriendsFragment extends Fragment {
     // hardcode to check if list shows
     private void initData() {
         newFriendList = new ArrayList<>();
-
         newFriendList.add(new ModelClassNewFriends(R.drawable.profile_icon, "James", R.drawable.add));
         newFriendList.add(new ModelClassNewFriends(R.drawable.img, "John", R.drawable.add));
         newFriendList.add(new ModelClassNewFriends(R.drawable.img, "Jannah", R.drawable.add));
@@ -62,3 +61,4 @@ public class FindNewFriendsFragment extends Fragment {
 
     }
 }
+

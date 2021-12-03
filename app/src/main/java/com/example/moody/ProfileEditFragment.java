@@ -33,7 +33,6 @@ import java.util.HashMap;
 public class ProfileEditFragment extends Fragment{
     DatePickerDialog.OnDateSetListener listener;
     TextView birthday_date, done, status;
-    Switch statusSwitch;
 
     EditText firstName, lastName, username, password;
     private final static String DEFAULT_PUBLIC = "Public";
@@ -42,12 +41,26 @@ public class ProfileEditFragment extends Fragment{
     private DatabaseReference ref;
     private String Uid;
     private String birthday;
+    Switch profilestatus;
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.profile_edit_fragment, container, false);
         birthday_date = (TextView) view.findViewById(R.id.birthday_date);
+        profilestatus = (Switch) view.findViewById(R.id.profilestatus);
+        profilestatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b==true){
+                    profilestatus.setText("Private");
+                }
+                else{
+                    profilestatus.setText("Public");
+                }
+            }
+        });
 
         done = view.findViewById(R.id.editDone);
         firstName = view.findViewById(R.id.editFirstName);
@@ -55,7 +68,6 @@ public class ProfileEditFragment extends Fragment{
         username = view.findViewById(R.id.editUsername);
         password = view.findViewById(R.id.editPassword);
         status = view.findViewById(R.id.editStatus);
-        statusSwitch = view.findViewById(R.id.statusSwitch);
 
         //read data from firebase so user dont need to type the data they dont want to change
         user = FirebaseAuth.getInstance().getCurrentUser();
@@ -92,18 +104,6 @@ public class ProfileEditFragment extends Fragment{
             });
         }
 
-
-        //status switch
-        statusSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked == true){
-                    status.setText(DEFAULT_PUBLIC);
-                }else{
-                    status.setText(DEFAULT_PRIVATE);
-                }
-            }
-        });
 
         //birthday date picker
         Calendar cal = Calendar.getInstance();
