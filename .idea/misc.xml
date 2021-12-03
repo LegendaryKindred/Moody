@@ -27,6 +27,11 @@
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/menu/drawer_menu.xml" value="0.24791666666666667" />
         <entry key="..\:/Users/XIAN WANG/Desktop/Moody/app/src/main/res/layout/login_fragment.xml" value="0.2223731884057971" />
         <entry key="..\:/Users/XIAN WANG/Desktop/Moody/app/src/main/res/layout/register_fragment.xml" value="0.2223731884057971" />
+        <entry key="..\:/Users/yang0/Moody/app/src/main/res/layout/find_new_friends_fragment.xml" value="0.32563405797101447" />
+        <entry key="..\:/Users/yang0/Moody/app/src/main/res/layout/fragment_friend_request.xml" value="0.32563405797101447" />
+        <entry key="..\:/Users/yang0/Moody/app/src/main/res/layout/fragment_my_friends_list.xml" value="0.32563405797101447" />
+        <entry key="..\:/Users/yang0/Moody/app/src/main/res/layout/friend_request_items.xml" value="0.32563405797101447" />
+        <entry key="..\:/Users/yang0/Moody/app/src/main/res/layout/new_friend_items.xml" value="0.32563405797101447" />
       </map>
     </option>
   </component>

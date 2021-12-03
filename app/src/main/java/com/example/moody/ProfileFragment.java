@@ -24,8 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class ProfileFragment extends Fragment {
 
-    private TextView firstName, lastName, username, password, email;
-    private FirebaseAuth userAuth;
+    private TextView firstName, lastName, username, password, email, birthday, status;
     private FirebaseUser user;
     private DatabaseReference ref;
     private String Uid;
@@ -41,6 +40,8 @@ public class ProfileFragment extends Fragment {
         username = view.findViewById(R.id.profileUsername);
         password = view.findViewById(R.id.profilePassword);
         email = view.findViewById(R.id.profileEmail);
+        birthday = view.findViewById(R.id.profileBirthday);
+        status = view.findViewById(R.id.profileStatus);
 
         user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -60,13 +61,16 @@ public class ProfileFragment extends Fragment {
                             String un = String.valueOf(dataSnapshot.child("username").getValue());
                             String pw = String.valueOf(dataSnapshot.child("password").getValue());
                             String em = String.valueOf(dataSnapshot.child("email").getValue());
-
+                            String bd = String.valueOf(dataSnapshot.child("birthday").getValue());
+                            String st = String.valueOf(dataSnapshot.child("status").getValue());
 
                             firstName.setText(fn);
                             lastName.setText(ln);
                             username.setText(un);
                             password.setText(pw);
                             email.setText(em);
+                            birthday.setText(bd);
+                            status.setText(st);
 
                             Toast.makeText(getActivity(), "Successfully read data", Toast.LENGTH_LONG).show();
 

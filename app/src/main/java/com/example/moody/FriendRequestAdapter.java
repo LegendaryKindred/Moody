@@ -8,7 +8,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.List;
 
@@ -17,6 +21,7 @@ public class FriendRequestAdapter extends RecyclerView.Adapter<FriendRequestAdap
     private List<ModelClassFriendRequest> friendRequests;
 
     public FriendRequestAdapter(List<ModelClassFriendRequest>friendRequests){this.friendRequests = friendRequests;}
+
 
     @NonNull
     @Override
@@ -33,7 +38,6 @@ public class FriendRequestAdapter extends RecyclerView.Adapter<FriendRequestAdap
         int block_pic = friendRequests.get(position).getBlock();
 
         holder.setData(resource, name, add_pic, block_pic);
-
     }
 
     @Override
@@ -46,6 +50,7 @@ public class FriendRequestAdapter extends RecyclerView.Adapter<FriendRequestAdap
         TextView friendName;
         ImageButton add;
         ImageButton block;
+        private FirebaseUser user;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -53,6 +58,16 @@ public class FriendRequestAdapter extends RecyclerView.Adapter<FriendRequestAdap
             friendName = itemView.findViewById(R.id.friend_request_name);
             add = itemView.findViewById(R.id.friend_add);
             block = itemView.findViewById(R.id.friend_block);
+
+            user = FirebaseAuth.getInstance().getCurrentUser();
+
+            add.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    FirebaseHelper helper = new FirebaseHelper(user);
+                    helper.addFriend(user, (String) friendName.getText());
+                }
+            });
         }
 
         public void setData(int resource, String name, int add_pic, int block_pic) {

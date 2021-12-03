@@ -1,4 +1,3 @@
-
 package com.example.moody;
 
 import android.os.Bundle;
