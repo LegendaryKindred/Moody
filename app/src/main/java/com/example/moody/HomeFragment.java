@@ -51,18 +51,23 @@ public class HomeFragment extends Fragment {
                                 LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
                                 LatLng madison = new LatLng(43.0730517,-89.4012302);
                                 //create maker options
-                                MarkerOptions options = new MarkerOptions().position(madison).title("You are here");
+                                MarkerOptions options = new MarkerOptions().position(latLng).title("You are here");
 
                                 //zoom map
-                                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(madison, 10));
+                                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
 
                                 // add marker on map
                                 googleMap.addMarker(options);
                             }
                         });
+
+                        //post status
                     }
                 }
             });
+
+            
+
         }else{
             ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
         }
