@@ -8,8 +8,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -45,6 +47,10 @@ public class FirebaseHelper {
         });
         return result[0];
     }
+
+//    //find user
+//    public FirebaseUser searchUser(String email){
+//    }
 
     public boolean deleteFriend(FirebaseUser user , String email){
         ArrayList<String> friendList = getFriendList(getFriendString(user));
@@ -101,5 +107,32 @@ public class FirebaseHelper {
 
     public ArrayList<String> getFriendList(String friendString){
         return new ArrayList<String>(Arrays.asList(friendString.split("/")));
+    }
+
+    public List<String> searchFriend(String searchString){
+        List<String> result = new ArrayList<String>();
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+        ref.child("Users").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if(task.isSuccessful()){
+                    DataSnapshot snapshot = task.getResult();
+                    Iterable<DataSnapshot> users = snapshot.getChildren();
+
+                    for (DataSnapshot user: users) {
+                        User u = user.getValue(User.class);
+
+                        if(u.getEmail().contains(searchString)){
+                            System.out.println(u.getEmail());
+                            result.add(u.getEmail());
+                        }
+
+                    }
+                }
+            }
+        });
+
+        System.out.println(result.toString() + "search function");
+        return result;
     }
 }

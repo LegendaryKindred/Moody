@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class User {
     private String firstName, lastName, username, email, password, phone, friend, status, birthday;
 
+    public User (){  }
+
     public User(String firstName, String lastName, String username, String email, String password, String phone, String friend, String status, String birthday) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -32,6 +34,13 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "email='" + email + '\'' +
+                '}';
     }
 
     public String getUsername() {
