@@ -85,7 +85,7 @@ public class FirebaseHelper {
 //
 //    }
 
-    private String getFriendString(FirebaseUser user){
+    public String getFriendString(FirebaseUser user){
         final String[] friend = new String[1];
         String Uid = user.getUid();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
