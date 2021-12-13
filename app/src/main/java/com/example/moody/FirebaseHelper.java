@@ -52,34 +52,34 @@ public class FirebaseHelper {
 //    public FirebaseUser searchUser(String email){
 //    }
 
-    public boolean deleteFriend(FirebaseUser user , String email){
-        ArrayList<String> friendList = getFriendList(getFriendString(user));
-        String r = "";
-        for(String e: friendList){
-            if(e.equals(email)){
-                continue;
-            }else{
-                r = r + e+ "/";
-            }
-        }
-
-        final boolean[] result = new boolean[1];
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
-        String Uid = user.getUid();
-        HashMap User = new HashMap();
-        User.put("friend", r);
-        ref.child(Uid).updateChildren(User).addOnCompleteListener(new OnCompleteListener() {
-            @Override
-            public void onComplete(@NonNull Task task) {
-                if(task.isSuccessful()){
-                    result[0] = true;
-                }else{
-                    result[0] = false;
-                }
-            }
-        });
-        return result[0];
-    }
+//    public boolean deleteFriend(FirebaseUser user , String email){
+//        ArrayList<String> friendList = getFriendList(getFriendString(user));
+//        String r = "";
+//        for(String e: friendList){
+//            if(e.equals(email)){
+//                continue;
+//            }else{
+//                r = r + e+ "/";
+//            }
+//        }
+//
+//        final boolean[] result = new boolean[1];
+//        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
+//        String Uid = user.getUid();
+//        HashMap User = new HashMap();
+//        User.put("friend", r);
+//        ref.child(Uid).updateChildren(User).addOnCompleteListener(new OnCompleteListener() {
+//            @Override
+//            public void onComplete(@NonNull Task task) {
+//                if(task.isSuccessful()){
+//                    result[0] = true;
+//                }else{
+//                    result[0] = false;
+//                }
+//            }
+//        });
+//        return result[0];
+//    }
 
 //    public ArrayList<String> searchFriend(FirebaseUser user, String email){
 //
@@ -105,9 +105,9 @@ public class FirebaseHelper {
         return friend[0];
     }
 
-    public ArrayList<String> getFriendList(String friendString){
-        return new ArrayList<String>(Arrays.asList(friendString.split("/")));
-    }
+//    public ArrayList<String> getFriendList(String friendString){
+//        return new ArrayList<String>(Arrays.asList(friendString.split("/")));
+//    }
 
     public List<String> searchFriend(String searchString){
         List<String> result = new ArrayList<String>();
