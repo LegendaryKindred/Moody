@@ -1,6 +1,7 @@
 package com.example.moody;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
+<<<<<<< HEAD
+=======
+
+>>>>>>> c253ad07de99ed0183d479c509353203cc357f4e
 
 public class MyFriendsFragment extends Fragment {
 
@@ -31,6 +36,10 @@ public class MyFriendsFragment extends Fragment {
     List<ModelClassNewFriends> newFriendList;
     FirebaseUser cu;
     DatabaseReference ref;
+<<<<<<< HEAD
+=======
+    ArrayList <String> friendList;
+>>>>>>> c253ad07de99ed0183d479c509353203cc357f4e
 
     @Nullable
     @Override
@@ -39,13 +48,21 @@ public class MyFriendsFragment extends Fragment {
 
         cu = FirebaseAuth.getInstance().getCurrentUser();
         newFriendList = new ArrayList<>();
+<<<<<<< HEAD
         recyclerView = view.findViewById(R.id.myFriendList);
 
 
+=======
+
+        recyclerView = view.findViewById(R.id.myFriendList);
+
+        String test;
+>>>>>>> c253ad07de99ed0183d479c509353203cc357f4e
         ref = FirebaseDatabase.getInstance().getReference();
         ref.child("Users").child(cu.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
+<<<<<<< HEAD
                 if(task.isSuccessful()){
                     DataSnapshot dataSnapshot = task.getResult();
                     String friends  = String.valueOf(dataSnapshot.child("friend").getValue());
@@ -67,12 +84,42 @@ public class MyFriendsFragment extends Fragment {
                     Toast.makeText(getActivity(), "friend data read successful", Toast.LENGTH_LONG).show();
                 }else{
                     Toast.makeText(getActivity(), "friend data read unsuccessful", Toast.LENGTH_LONG).show();
+=======
+                if (!task.isSuccessful()) {
+                    DataSnapshot dataSnapshot = task.getResult();
+                    String test = String.valueOf(dataSnapshot.child("friend").getValue());
+                }
+                else {
+                    Log.d("firebase friend error", String.valueOf(task.getResult().getValue()));
+>>>>>>> c253ad07de99ed0183d479c509353203cc357f4e
                 }
             }
         });
 
 
 
+<<<<<<< HEAD
+=======
+        //System.out.println("This is test for grab friend from backend"+test);
+
+
+//        friendList = helper.getFriendList(helper.getFriendString(cu));
+
+//        for (String email: friendList) {
+//            newFriendList.add(new ModelClassNewFriends(R.drawable.img, email, R.drawable.add));
+//        }
+
+        layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        // load the list items to the recycler view
+        adapter = new NewFriendAdapter(newFriendList);
+        recyclerView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
+
+
+>>>>>>> c253ad07de99ed0183d479c509353203cc357f4e
         return view;
+
+
     }
 }
