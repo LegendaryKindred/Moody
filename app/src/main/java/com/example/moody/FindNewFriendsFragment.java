@@ -79,6 +79,7 @@ public class FindNewFriendsFragment extends Fragment {
                 adapter = new NewFriendAdapter(newFriendList);
                 recyclerView.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
+                newFriendList = new ArrayList<>();
             }
         });
 
