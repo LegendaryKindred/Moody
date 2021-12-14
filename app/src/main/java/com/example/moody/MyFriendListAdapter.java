@@ -3,6 +3,7 @@ package com.example.moody;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,9 +30,18 @@ public class MyFriendListAdapter extends RecyclerView.Adapter<MyFriendListAdapte
     public void onBindViewHolder(@NonNull MyFriendListAdapter.ViewHolder holder, int position) {
         int resource = myFriendList.get(position).getImageview();
         String name = myFriendList.get(position).getTextviewName();
+        int remove_pic = myFriendList.get(position).getFriendRemove();
         String mood = myFriendList.get(position).getTextViewMood();
 
-        holder.setData(resource, name, mood);
+        holder.setData(resource, name, remove_pic, mood);
+
+        holder.remove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("Adapter button clicked");
+            }
+        });
+
 
     }
 
@@ -43,6 +53,7 @@ public class MyFriendListAdapter extends RecyclerView.Adapter<MyFriendListAdapte
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView profilepic;
         TextView friendName;
+        ImageButton remove;
         TextView friendmood;
 
         public ViewHolder(@NonNull View itemView) {
@@ -50,11 +61,13 @@ public class MyFriendListAdapter extends RecyclerView.Adapter<MyFriendListAdapte
             profilepic = itemView.findViewById(R.id.myfriendpic);
             friendName = itemView.findViewById(R.id.myfriendlistname);
             friendmood = itemView.findViewById(R.id.myfriendmood);
+            remove = itemView.findViewById(R.id.my_friend_block);
         }
 
-        public void setData(int resource, String name, String mood) {
+        public void setData(int resource, String name, int remove_pic, String mood) {
             profilepic.setImageResource(resource);
             friendName.setText(name);
+            remove.setImageResource(remove_pic);
             friendmood.setText(mood);
         }
     }

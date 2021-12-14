@@ -30,7 +30,7 @@ public class MyFriendsFragment extends Fragment {
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     LinearLayoutManager layoutManager;
-    List<ModelClassNewFriends> newFriendList;
+    List<ModelClassMyFriends> newFriendList;
     FirebaseUser cu;
     DatabaseReference ref;
 
@@ -58,16 +58,18 @@ public class MyFriendsFragment extends Fragment {
                     ArrayList<String> friendList = helper.friendStringToList(friends);
                     System.out.println(friendList.toString());
                     for ( String email: friendList) {
-                        newFriendList.add(new ModelClassNewFriends(R.drawable.img, email, R.drawable.add));
+                        //newFriendList.add(new ModelClassMyFriends(R.drawable.img, email, R.drawable.block, "Good"));
+                        newFriendList.add(new ModelClassMyFriends(R.drawable.img, email, R.drawable.block, "1"));
                     }
                     layoutManager = new LinearLayoutManager(getContext());
                     recyclerView.setLayoutManager(layoutManager);
 
                     // load the list items to the recycler view
-                    adapter = new NewFriendAdapter(newFriendList);
+                    adapter = new MyFriendListAdapter(newFriendList);
                     recyclerView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
                     newFriendList = new ArrayList<>();
+
 
                     Toast.makeText(getActivity(), "friend data read successful", Toast.LENGTH_LONG).show();
                 }else{
@@ -76,6 +78,9 @@ public class MyFriendsFragment extends Fragment {
                 }
             }
         });
+
+
+
 
         return view;
 

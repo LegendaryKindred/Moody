@@ -6,13 +6,14 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class NewFriendAdapter extends RecyclerView.Adapter<NewFriendAdapter.ViewHolder> {
+public class NewFriendAdapter extends RecyclerView.Adapter<NewFriendAdapter.ViewHolder>  {
 
     private List<ModelClassNewFriends> newFriendList;
 
@@ -35,6 +36,14 @@ public class NewFriendAdapter extends RecyclerView.Adapter<NewFriendAdapter.View
 
         holder.setData(resource, name, add_pic);
 
+        holder.add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("Adapter button clicked");
+            }
+        });
+
+
     }
 
     @Override
@@ -42,7 +51,9 @@ public class NewFriendAdapter extends RecyclerView.Adapter<NewFriendAdapter.View
         return newFriendList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+
+
+    public class ViewHolder extends RecyclerView.ViewHolder  {
         ImageView profilepic;
         TextView friendName;
         ImageButton add;
@@ -59,5 +70,10 @@ public class NewFriendAdapter extends RecyclerView.Adapter<NewFriendAdapter.View
             friendName.setText(name);
             add.setImageResource(add_pic);
         }
+
+
     }
+
+
+
 }

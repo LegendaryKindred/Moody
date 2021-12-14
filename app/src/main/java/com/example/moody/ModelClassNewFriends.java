@@ -17,4 +17,6 @@ public class ModelClassNewFriends {
         return newFriendName;
     }
     public int getNewFriendAdd(){return newFriendAdd;}
+
+
 }
