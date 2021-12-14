@@ -38,7 +38,7 @@ public class MyFriendListAdapter extends RecyclerView.Adapter<MyFriendListAdapte
         holder.remove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Adapter button clicked");
+                System.out.println("Friend remove button clicked");
             }
         });
 

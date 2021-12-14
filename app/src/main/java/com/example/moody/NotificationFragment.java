@@ -46,13 +46,18 @@ public class NotificationFragment extends Fragment {
 
                 if(task.isSuccessful()){
                     DataSnapshot dataSnapshot = task.getResult();
-                    String friends  = String.valueOf(dataSnapshot.child("friend").getValue());
+                    String friends  = String.valueOf(dataSnapshot.child("notification").getValue());
                     FirebaseHelper helper = new FirebaseHelper();
                     ArrayList<String> friendList = helper.friendStringToList(friends);
                     System.out.println(friendList.toString());
                     for ( String email: friendList) {
-                        //newFriendList.add(new ModelClassMyFriends(R.drawable.img, email, R.drawable.block, "Good"));
-                        noteList.add(new ModelClassFriendRequest(R.drawable.img,email, R.drawable.add, R.drawable.block ));
+
+                        if(email.contains("System-Notification")){
+                            continue;
+                        }else{
+                            noteList.add(new ModelClassFriendRequest(R.drawable.img,email, R.drawable.add, R.drawable.block ));
+                        }
+
                     }
                     layoutManager = new LinearLayoutManager(getContext());
                     recyclerView.setLayoutManager(layoutManager);

@@ -34,6 +34,20 @@ public class FriendRequestAdapter extends RecyclerView.Adapter<FriendRequestAdap
 
         holder.setData(resource, name, add_pic, block_pic);
 
+        holder.add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("Friend request confirm button clicked");
+            }
+        });
+
+        holder.block.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("Friend request reject button clicked");
+            }
+        });
+
     }
 
     @Override
