@@ -48,39 +48,53 @@ public class NewFriendAdapter extends RecyclerView.Adapter<NewFriendAdapter.View
         holder.add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
-                String Uid = user.getUid();
-
-                ref.child(Uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                ref.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DataSnapshot> task) {
-                        if (task.isSuccessful()) {
-                            if (task.getResult().exists()) {
+                        if(task.isSuccessful()){
+                            if(task.getResult().exists()){
+
                                 DataSnapshot dataSnapshot = task.getResult();
-                                String origin = String.valueOf(dataSnapshot.child("notification").getValue());
-                                FirebaseHelper helper = new FirebaseHelper();
-                                if(helper.checkFriend(origin, name)){
-                                    Toast.makeText(v.getContext(), "This user is your friend already", Toast.LENGTH_LONG).show();
-                                }else{
-                                    String note = (origin +"/"+name);
-                                    HashMap User = new HashMap();
-                                    User.put("notification", note);
-                                    ref.child(Uid).updateChildren(User);
+                                for(DataSnapshot snapshot: dataSnapshot.getChildren()){
+                                    User user = snapshot.getValue(User.class);
+                                    String Uid;
+                                    if(user.getEmail().equals(name)){
+                                        Uid = user.getId();
+                                        ref.child(Uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                                if (task.isSuccessful()) {
+                                                    if (task.getResult().exists()) {
+                                                        DataSnapshot dataSnapshot = task.getResult();
+                                                        String origin = String.valueOf(dataSnapshot.child("notification").getValue());
+                                                        FirebaseHelper helper = new FirebaseHelper();
+                                                        FirebaseUser cu = FirebaseAuth.getInstance().getCurrentUser();
+                                                        if(helper.checkFriend(origin, cu.getEmail())){
+                                                            Toast.makeText(v.getContext(), "The other user didn't approve your friend request yet", Toast.LENGTH_LONG).show();
+                                                        }else{
+                                                            String note = helper.dataCleaner((origin +"/"+cu.getEmail()));
+                                                            HashMap User = new HashMap();
+                                                            User.put("notification", note);
+                                                            ref.child(Uid).updateChildren(User);
+                                                        }
+                                                    } else {
+                                                        Toast.makeText(v.getContext(), "Can't add the user", Toast.LENGTH_LONG).show();
+                                                    }
+                                                } else {
+                                                    Toast.makeText(v.getContext(), "Can't add the user", Toast.LENGTH_LONG).show();
+                                                }
+                                            }
+                                        });
+                                    }
                                 }
-                            } else {
-                                Toast.makeText(v.getContext(), "Can't add the user", Toast.LENGTH_LONG).show();
                             }
-                        } else {
+                        }else{
                             Toast.makeText(v.getContext(), "Can't add the user", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
-
-
             }
-
-
         });
 
 

@@ -47,11 +47,58 @@ public class FriendRequestAdapter extends RecyclerView.Adapter<FriendRequestAdap
         holder.add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
-                String Uid = user.getUid();
+                ref.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if(task.isSuccessful()){
+                            if(task.getResult().exists()){
+                                DataSnapshot dataSnapshot = task.getResult();
+                                for(DataSnapshot snapshot: dataSnapshot.getChildren()){
+                                    User user = snapshot.getValue(User.class);
+                                    String Uid;
+                                    if(user.getEmail().equals(name)){
+                                        Uid = user.getId();
+                                        ref.child(Uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                                if (task.isSuccessful()) {
+                                                    if (task.getResult().exists()) {
+                                                        DataSnapshot dataSnapshot = task.getResult();
+                                                        String origin = String.valueOf(dataSnapshot.child("friend").getValue());
+                                                        FirebaseHelper helper = new FirebaseHelper();
+                                                        FirebaseUser cu = FirebaseAuth.getInstance().getCurrentUser();
+                                                        if(helper.checkFriend(origin, cu.getEmail())){
+                                                            Toast.makeText(v.getContext(), "Friend approve error", Toast.LENGTH_LONG).show();
+                                                        }else{
+                                                            String friend = helper.dataCleaner((origin +"/"+cu.getEmail()));
+                                                            HashMap User = new HashMap();
+                                                            User.put("friend", friend);
+                                                            ref.child(Uid).updateChildren(User);
+                                                        }
+                                                    } else {
+                                                        Toast.makeText(v.getContext(), "Can't add the user", Toast.LENGTH_LONG).show();
+                                                    }
+                                                } else {
+                                                    Toast.makeText(v.getContext(), "Can't add the user", Toast.LENGTH_LONG).show();
+                                                }
+                                            }
+                                        });
+                                    }
+                                }
 
-                ref.child(Uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+
+                            }
+                        }else{
+                            Toast.makeText(v.getContext(), "Can't add the user", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+
+                FirebaseUser u = FirebaseAuth.getInstance().getCurrentUser();
+                String uid = u.getUid();
+
+                ref.child(uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DataSnapshot> task) {
                         if (task.isSuccessful()) {
@@ -61,26 +108,27 @@ public class FriendRequestAdapter extends RecyclerView.Adapter<FriendRequestAdap
                                 String origin = String.valueOf(dataSnapshot.child("friend").getValue());
                                 FirebaseHelper helper = new FirebaseHelper();
                                 if(helper.checkFriend(origin, name)){
+                                    System.out.println("This user is your friend already");
                                     Toast.makeText(v.getContext(), "This user is your friend already", Toast.LENGTH_LONG).show();
                                 }else{
-                                    String newfriend = (origin +"/"+name);
+                                    String newfriend = helper.dataCleaner((origin +"/"+name));
                                     HashMap User = new HashMap();
                                     User.put("friend", newfriend);
-                                    ref.child(Uid).updateChildren(User);
+                                    ref.child(uid).updateChildren(User);
                                 }
                                 // still need to implement the part to modify the name's friend list
                                 String note = String.valueOf((dataSnapshot.child("notification").getValue()));
-                                String newnote = note.replace((name+"/"), "");
+                                String newnote = helper.dataCleaner(note.replace(name, ""));
                                 HashMap User = new HashMap();
                                 User.put("notification", newnote);
-                                ref.child(Uid).updateChildren(User);
-
+                                ref.child(uid).updateChildren(User);
                                 }
                         } else {
                             Toast.makeText(v.getContext(), "Can't accept the user", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
+
             }
         });
 
@@ -96,8 +144,9 @@ public class FriendRequestAdapter extends RecyclerView.Adapter<FriendRequestAdap
                         if (task.isSuccessful()) {
                             if (task.getResult().exists()) {
                                 DataSnapshot dataSnapshot = task.getResult();
+                                FirebaseHelper helper = new FirebaseHelper();
                                 String note = String.valueOf((dataSnapshot.child("notification").getValue()));
-                                String newnote = note.replace((name), "");
+                                String newnote = helper.dataCleaner(note.replace((name), ""));
                                 HashMap User = new HashMap();
                                 User.put("notification", newnote);
                                 ref.child(Uid).updateChildren(User);

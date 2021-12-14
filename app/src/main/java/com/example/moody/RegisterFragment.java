@@ -65,11 +65,11 @@ public class RegisterFragment extends Fragment {
         String email = editEmail.getText().toString().trim();
         String password = editPassword.getText().toString().trim();
         String phone = editPhone.getText().toString().trim();
-        String friend = "Moody-Supporter";
+        String friend = "Moody-Supporter/";
         String birthday = "00/00/0000";
         String status = "Private";
         String mood = "1";
-        String notification = "System-Notification";
+        String notification = "System-Notification/";
 
         if(firstName.isEmpty()){
             editFirstName.setError("First Name is required!");
@@ -126,7 +126,8 @@ public class RegisterFragment extends Fragment {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    User user = new User(firstName, lastName, username, email, password, phone, friend, status, birthday, mood, notification);
+                    String id = auth.getUid();
+                    User user = new User(firstName, lastName, username, email, password, phone, friend, status, birthday, mood, notification, id);
                     FirebaseDatabase.getInstance().getReference("Users")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                             .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {

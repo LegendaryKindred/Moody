@@ -63,9 +63,7 @@ public class FindNewFriendsFragment extends Fragment {
                             for (DataSnapshot user: users) {
                                 User u = user.getValue(User.class);
                                 if(u.getEmail().contains(searchString)){
-                                    System.out.println(u.getEmail());
                                     newFriendList.add(new ModelClassNewFriends(R.drawable.img, u.getEmail(), R.drawable.add));
-                                    System.out.println(newFriendList.size());
                                 }
                             }
                         }

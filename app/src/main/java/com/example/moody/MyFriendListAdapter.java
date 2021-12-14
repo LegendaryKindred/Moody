@@ -57,7 +57,8 @@ public class MyFriendListAdapter extends RecyclerView.Adapter<MyFriendListAdapte
                             if (task.getResult().exists()) {
                                 DataSnapshot dataSnapshot = task.getResult();
                                 String origin = String.valueOf(dataSnapshot.child("friend").getValue());
-                                String newfriend = origin.replace((name), "");
+                                FirebaseHelper helper = new FirebaseHelper();
+                                String newfriend = helper.dataCleaner(origin.replace((name), ""));
                                 HashMap User = new HashMap();
                                 User.put("friend", newfriend);
                                 ref.child(Uid).updateChildren(User);

@@ -37,12 +37,23 @@ public class FirebaseHelper {
 
     public boolean checkFriend(String friend, String email){
         if(friend.matches("(.*)" + email + "(.*)")){
-            System.out.println("has duplicate");
             return true;
         }else{
-            System.out.println("dont have duplicate");
             return  false;
         }
+    }
+
+    public String dataCleaner(String list){
+        String result = "";
+        String[] r = list.split("/");
+        for (String email: r) {
+            if(email.equals("")){
+                continue;
+            }else{
+                result = result + "/" + email;
+            }
+        }
+        return result;
     }
 
 }

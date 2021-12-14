@@ -49,7 +49,6 @@ public class NotificationFragment extends Fragment {
                     String friends  = String.valueOf(dataSnapshot.child("notification").getValue());
                     FirebaseHelper helper = new FirebaseHelper();
                     ArrayList<String> friendList = helper.friendStringToList(friends);
-                    System.out.println(friendList.toString());
                     for ( String email: friendList) {
 
                         if(email.contains("System-Notification") || email.equals("")){
