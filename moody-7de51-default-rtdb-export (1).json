@@ -1,0 +1,13 @@
+{
+  "users" : {
+    "email" : {
+        "first-name": "Xian",
+        "last-name": "Wang",
+        "username": "zion",
+        "password": "1234",
+        "birthday": "08/03/1998",
+        "status": "public"
+
+    }  
+  }
+}
