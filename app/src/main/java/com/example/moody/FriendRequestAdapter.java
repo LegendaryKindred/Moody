@@ -86,8 +86,6 @@ public class FriendRequestAdapter extends RecyclerView.Adapter<FriendRequestAdap
                                         });
                                     }
                                 }
-
-
                             }
                         }else{
                             Toast.makeText(v.getContext(), "Can't add the user", Toast.LENGTH_LONG).show();

@@ -84,6 +84,8 @@ public class MyFriendsFragment extends Fragment {
 
 
 
+
+
         return view;
 
 
