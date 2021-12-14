@@ -11,6 +11,15 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 import java.util.List;
 
 public class MyFriendListAdapter extends RecyclerView.Adapter<MyFriendListAdapter.ViewHolder> {
@@ -38,7 +47,29 @@ public class MyFriendListAdapter extends RecyclerView.Adapter<MyFriendListAdapte
         holder.remove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Friend remove button clicked");
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
+                String Uid = user.getUid();
+                ref.child(Uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            if (task.getResult().exists()) {
+                                DataSnapshot dataSnapshot = task.getResult();
+                                String origin = String.valueOf(dataSnapshot.child("friend").getValue());
+                                String newfriend = origin.replace((name), "");
+                                HashMap User = new HashMap();
+                                User.put("friend", newfriend);
+                                ref.child(Uid).updateChildren(User);
+
+                            } else {
+                                Toast.makeText(v.getContext(), "Can't add the user", Toast.LENGTH_LONG).show();
+                            }
+                        } else {
+                            Toast.makeText(v.getContext(), "Can't add the user", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
             }
         });
 

@@ -52,7 +52,7 @@ public class NotificationFragment extends Fragment {
                     System.out.println(friendList.toString());
                     for ( String email: friendList) {
 
-                        if(email.contains("System-Notification")){
+                        if(email.contains("System-Notification") || email.equals("")){
                             continue;
                         }else{
                             noteList.add(new ModelClassFriendRequest(R.drawable.img,email, R.drawable.add, R.drawable.block ));
