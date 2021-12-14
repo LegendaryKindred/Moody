@@ -28,9 +28,14 @@
         <entry key="..\:/Users/XIAN WANG/Desktop/Moody/app/src/main/res/layout/notification_fragment.xml" value="0.4041666666666667" />
         <entry key="..\:/Users/XIAN WANG/Desktop/Moody/app/src/main/res/layout/register_fragment.xml" value="0.2223731884057971" />
         <entry key="..\:/Users/XIAN WANG/Desktop/Moody/app/src/main/res/menu/drawer_menu.xml" value="0.2890625" />
+        <entry key="app/src/main/res/drawable/add_rate.xml" value="0.27395833333333336" />
+        <entry key="app/src/main/res/drawable/close.xml" value="0.27395833333333336" />
+        <entry key="app/src/main/res/drawable/main_btn_background.xml" value="0.26974358974358975" />
+        <entry key="app/src/main/res/drawable/round_button.xml" value="0.27395833333333336" />
         <entry key="app/src/main/res/layout/home_fragment.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/login_fragment.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/notification_fragment.xml" value="0.2015625" />
+        <entry key="app/src/main/res/layout/pop_up_rating.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/profile_edit_fragment.xml" value="0.18796296296296297" />
         <entry key="app/src/main/res/layout/profile_fragment.xml" value="0.1" />
       </map>
