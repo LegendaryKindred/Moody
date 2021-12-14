@@ -22,22 +22,37 @@
 
             <ImageView
                 android:id="@+id/myfriendpic"
-                android:layout_width="60dp"
+                android:layout_width="65dp"
                 android:layout_height="60dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginEnd="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/myfriendlistname"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/myfriendlistname"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
+                android:layout_width="167dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="53dp"
                 android:gravity="center|center_horizontal|left"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/myfriendmood"
+                app:layout_constraintEnd_toStartOf="@+id/my_friend_block"
                 app:layout_constraintStart_toEndOf="@+id/myfriendpic"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.25" />
+
+            <ImageButton
+                android:id="@+id/my_friend_block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/block"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -47,7 +62,8 @@
                 android:layout_marginTop="10dp"
                 android:textSize="25dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/my_friend_block"
+                app:layout_constraintHorizontal_bias="0.153"
                 app:layout_constraintStart_toEndOf="@+id/myfriendlistname"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />

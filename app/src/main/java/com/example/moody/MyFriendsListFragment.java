@@ -26,7 +26,7 @@ public class MyFriendsListFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_my_friends_list, container, false);
 
-        initData();
+
         recyclerView = view.findViewById(R.id.myfriendlist);
         layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -40,24 +40,5 @@ public class MyFriendsListFragment extends Fragment {
         return view;
     }
 
-    // hardcode to check if list shows
-    private void initData() {
-        myFriendList = new ArrayList<>();
 
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "James", "1"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "John", "1"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Jannah", "1"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Hollie", "1"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Susan", "1"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Ross", "1"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Rachel", "1"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Cooper", "1"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Gabi", "1"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Hannah", "1"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Yolanda", "1"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Josh", "1"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Crystal", "1"));
-        myFriendList.add(new ModelClassMyFriends(R.drawable.img, "Fallon", "1"));
-
-    }
 }

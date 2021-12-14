@@ -85,10 +85,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new MyFriendsFragment()).commit();
                 break;
-            case R.id.group_chat_menu:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new GroupChatFragment()).commit();
-                break;
             case R.id.home_menu:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new HomeFragment()).commit();

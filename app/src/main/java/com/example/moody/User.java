@@ -3,11 +3,11 @@ package com.example.moody;
 import java.util.ArrayList;
 
 public class User {
-    private String firstName, lastName, username, email, password, phone, friend, status, birthday;
+    private String firstName, lastName, username, email, password, phone, friend, status, birthday, mood, notification, id;
 
     public User (){  }
 
-    public User(String firstName, String lastName, String username, String email, String password, String phone, String friend, String status, String birthday) {
+    public User(String firstName, String lastName, String username, String email, String password, String phone, String friend, String status, String birthday, String mood, String notification, String id) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
@@ -17,6 +17,9 @@ public class User {
         this.friend = friend;
         this.birthday = birthday;
         this.status = status;
+        this.mood = mood;
+        this.notification = notification;
+        this.id = id;
 
     }
 
@@ -34,6 +37,14 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override
@@ -73,6 +84,22 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getMood() {
+        return mood;
+    }
+
+    public void setMood(String mood) {
+        this.mood = mood;
+    }
+
+    public String getNotification() {
+        return notification;
+    }
+
+    public void setNotification(String notification) {
+        this.notification = notification;
     }
 
     public String getPassword() {
