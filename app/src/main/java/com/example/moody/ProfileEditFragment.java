@@ -141,6 +141,7 @@ public class ProfileEditFragment extends Fragment{
                 String un = username.getText().toString().trim();
                 String pw = password.getText().toString().trim();
                 String st = status.getText().toString().trim();
+                if(birthday==null){birthday="Nothing yet";}
                 String bd = birthday;
                 updateProfile(fn, ln, un, pw, bd, st);
 
