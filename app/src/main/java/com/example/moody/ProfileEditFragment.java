@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +23,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -29,14 +32,16 @@ import java.util.HashMap;
 
 public class ProfileEditFragment extends Fragment{
     DatePickerDialog.OnDateSetListener listener;
-    TextView birthday_date, done;
-
+    TextView birthday_date, done, status;
+    Switch statusSwitch;
 
     EditText firstName, lastName, username, password;
-
+    private final static String DEFAULT_PUBLIC = "Public";
+    private final static String DEFAULT_PRIVATE = "Private";
     private FirebaseUser user;
     private DatabaseReference ref;
     private String Uid;
+    private String birthday;
 
     @Nullable
     @Override
@@ -49,10 +54,58 @@ public class ProfileEditFragment extends Fragment{
         lastName = view.findViewById(R.id.editLastName);
         username = view.findViewById(R.id.editUsername);
         password = view.findViewById(R.id.editPassword);
+        status = view.findViewById(R.id.editStatus);
+        statusSwitch = view.findViewById(R.id.statusSwitch);
+
+        //read data from firebase so user dont need to type the data they dont want to change
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null) {
+            ref = FirebaseDatabase.getInstance().getReference("Users");
+            Uid = user.getUid();
 
 
+            ref.child(Uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DataSnapshot> task) {
+                    if (task.isSuccessful()) {
+                        if (task.getResult().exists()) {
+                            DataSnapshot dataSnapshot = task.getResult();
+                            String fn = String.valueOf(dataSnapshot.child("firstName").getValue());
+                            String ln = String.valueOf(dataSnapshot.child("lastName").getValue());
+                            String un = String.valueOf(dataSnapshot.child("username").getValue());
+                            String pw = String.valueOf(dataSnapshot.child("password").getValue());
+                            String bd = String.valueOf(dataSnapshot.child("birthday").getValue());
+
+                            firstName.setText(fn);
+                            lastName.setText(ln);
+                            username.setText(un);
+                            password.setText(pw);
+                            birthday_date.setText(bd);
+
+                        } else {
+                            Toast.makeText(getActivity(), "Fail to read user data2", Toast.LENGTH_LONG).show();
+                        }
+                    } else {
+                        Toast.makeText(getActivity(), "Fail to read user data1", Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
+        }
 
 
+        //status switch
+        statusSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked == true){
+                    status.setText(DEFAULT_PUBLIC);
+                }else{
+                    status.setText(DEFAULT_PRIVATE);
+                }
+            }
+        });
+
+        //birthday date picker
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
@@ -75,8 +128,8 @@ public class ProfileEditFragment extends Fragment{
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                 month = month + 1;
-                String date = month + "/" + day + "/" + year;
-                birthday_date.setText(date);
+                birthday = month + "/" + day + "/" + year;
+                birthday_date.setText(birthday);
             }
         };
 
@@ -87,8 +140,9 @@ public class ProfileEditFragment extends Fragment{
                 String ln = lastName.getText().toString().trim();
                 String un = username.getText().toString().trim();
                 String pw = password.getText().toString().trim();
-
-                updateProfile(fn, ln, un, pw);
+                String st = status.getText().toString().trim();
+                String bd = birthday;
+                updateProfile(fn, ln, un, pw, bd, st);
 
             }
         });
@@ -97,7 +151,7 @@ public class ProfileEditFragment extends Fragment{
         return view;
     }
 
-    private void updateProfile(String fn, String ln, String un, String pw){
+    private void updateProfile(String fn, String ln, String un, String pw, String bd, String st){
 
         user = FirebaseAuth.getInstance().getCurrentUser();
         ref = FirebaseDatabase.getInstance().getReference("Users");
@@ -108,6 +162,8 @@ public class ProfileEditFragment extends Fragment{
         User.put("lastName", ln);
         User.put("username", un);
         User.put("password", pw);
+        User.put("birthday", bd);
+        User.put("status", st);
 
         user.updatePassword(pw).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override

@@ -31,10 +31,6 @@
                     android:id="@+id/my_friend_menu"
                     android:title="My Friends"/>
                 <item
-                    android:id="@+id/group_chat_menu"
-                    android:title="Group Chat"
-                    />
-                <item
                     android:id="@+id/login_menu"
                     android:icon="@drawable/login_logout_icon"
                     android:title="Login"/>

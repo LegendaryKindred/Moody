@@ -4,14 +4,20 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -80,20 +86,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new MyFriendsFragment()).commit();
                 break;
-            case R.id.group_chat_menu:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new GroupChatFragment()).commit();
-                break;
             case R.id.home_menu:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new HomeFragment()).commit();
                 break;
-//            case R.id.logout_menu:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-//                        new GroupChatFragment()).commit();
-//                break;
+            case R.id.logout_menu:
+                FirebaseAuth.getInstance().signOut();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new LoginFragment()).commit();
+                break;
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

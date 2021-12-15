@@ -13,12 +13,15 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
 
 public class RegisterFragment extends Fragment {
     private FirebaseAuth mAuth;
@@ -62,6 +65,11 @@ public class RegisterFragment extends Fragment {
         String email = editEmail.getText().toString().trim();
         String password = editPassword.getText().toString().trim();
         String phone = editPhone.getText().toString().trim();
+        String friend = "Moody-Supporter/";
+        String birthday = "00/00/0000";
+        String status = "Private";
+        String mood = "1";
+        String notification = "System-Notification/";
 
         if(firstName.isEmpty()){
             editFirstName.setError("First Name is required!");
@@ -111,13 +119,15 @@ public class RegisterFragment extends Fragment {
             return;
         }
 
+
         progressBar.setVisibility(getView().VISIBLE);
         auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    User user = new User(firstName, lastName, username, email, password, phone);
+                    String id = auth.getUid();
+                    User user = new User(firstName, lastName, username, email, password, phone, friend, status, birthday, mood, notification, id);
                     FirebaseDatabase.getInstance().getReference("Users")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                             .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -125,6 +135,9 @@ public class RegisterFragment extends Fragment {
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
                                 Toast.makeText(getActivity(), "User has been registered successfully!", Toast.LENGTH_LONG).show();
+                                LoginFragment loginFragment = new LoginFragment();
+                                FragmentManager manager = getActivity().getSupportFragmentManager();
+                                manager.beginTransaction().replace(R.id.fragment_container, loginFragment , loginFragment.getTag()).commit();
                                 progressBar.setVisibility(getView().GONE);
                             }else{
                                 Toast.makeText(getActivity(), "Failed to register! Try again!1", Toast.LENGTH_LONG).show();
@@ -132,6 +145,8 @@ public class RegisterFragment extends Fragment {
                             }
                         }
                     });
+
+
                 }else{
                     Toast.makeText(getActivity(), "Failed to register! Try again!2", Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(getView().GONE);
