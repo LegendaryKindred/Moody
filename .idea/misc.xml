@@ -5,6 +5,9 @@
       <map>
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/find_new_friends_fragment.xml" value="0.12335359675785208" />
         <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/home_fragment.xml" value="0.12335359675785208" />
+        <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/login_fragment.xml" value="0.12335359675785208" />
+        <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/profile_edit_fragment.xml" value="0.12335359675785208" />
+        <entry key="..\:/Users/DELL/Moody/app/src/main/res/layout/profile_fragment.xml" value="0.12335359675785208" />
         <entry key="..\:/Users/XIAN WANG/Desktop/Moody/Moody/app/src/main/res/drawable/timeline_icon.xml" value="0.3546875" />
         <entry key="..\:/Users/XIAN WANG/Desktop/Moody/Moody/app/src/main/res/layout/activity_main.xml" value="0.334375" />
         <entry key="..\:/Users/XIAN WANG/Desktop/Moody/Moody/app/src/main/res/layout/login_fragment.xml" value="0.334375" />
@@ -14,14 +17,6 @@
         <entry key="..\:/Users/XIAN WANG/Desktop/Moody/Moody/app/src/main/res/menu/drawer_menu.xml" value="0.334375" />
         <entry key="..\:/Users/XIAN WANG/Desktop/Moody/app/src/main/res/layout/login_fragment.xml" value="0.2223731884057971" />
         <entry key="..\:/Users/XIAN WANG/Desktop/Moody/app/src/main/res/layout/register_fragment.xml" value="0.2223731884057971" />
-<<<<<<< HEAD
-=======
-        <entry key="..\:/Users/XIAN WANG/Desktop/Moody/app/src/main/res/menu/drawer_menu.xml" value="0.2890625" />
-        <entry key="..\:/Users/xiang/SHI/UW-Madison/2021-2022/Fall/CS 506/Assignments/Team Assignments/Moody/app/src/main/res/layout/activity_main.xml" value="0.2609375" />
-        <entry key="..\:/Users/xiang/SHI/UW-Madison/2021-2022/Fall/CS 506/Assignments/Team Assignments/Moody/app/src/main/res/layout/home_fragment.xml" value="0.2609375" />
-        <entry key="..\:/Users/xiang/SHI/UW-Madison/2021-2022/Fall/CS 506/Assignments/Team Assignments/Moody/app/src/main/res/layout/new_friend_items.xml" value="0.1296875" />
-        <entry key="..\:/Users/xiang/SHI/UW-Madison/2021-2022/Fall/CS 506/Assignments/Team Assignments/Moody/app/src/main/res/layout/toolbar.xml" value="0.2609375" />
->>>>>>> 8975b6456f9c1ad58006ec649cb724038f80882c
         <entry key="app/src/main/res/layout/home_fragment.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/login_fragment.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/notification_fragment.xml" value="0.2015625" />
