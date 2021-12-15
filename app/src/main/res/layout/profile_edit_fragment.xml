@@ -65,6 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Previous first name"
+                android:singleLine="true"
                 android:paddingLeft="20dp"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -98,6 +99,7 @@
                 android:id="@+id/editLastName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:singleLine="true"
                 android:hint="previous last name"
                 android:paddingLeft="20dp"
                 android:textSize="20dp" />
@@ -132,6 +134,7 @@
                 android:id="@+id/editUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:singleLine="true"
                 android:hint="previous username"
                 android:paddingLeft="20dp"
                 android:textSize="20dp" />
@@ -167,6 +170,7 @@
                 android:id="@+id/editPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:singleLine="true"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType='textPassword' />
