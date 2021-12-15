@@ -141,6 +141,31 @@ public class ProfileEditFragment extends Fragment{
                 String un = username.getText().toString().trim();
                 String pw = password.getText().toString().trim();
                 String st = status.getText().toString().trim();
+
+                if(firstName.length() > 40){
+                    firstName.setError("firstName should be no more than 40 characters");
+                    firstName.requestFocus();
+                    return;
+                }
+
+                if(lastName.length() > 40){
+                    lastName.setError("lastName should be no more than 40 characters");
+                    lastName.requestFocus();
+                    return;
+                }
+                
+                if(username.length() > 40){
+                    username.setError("firstName should be no more than 40 characters");
+                    username.requestFocus();
+                    return;
+                }
+
+                if(password.length() < 8){
+                    password.setError("Password length should be at least 8 characters");
+                    password.requestFocus();
+                    return;
+                }
+
                 if(birthday==null){birthday="Nothing yet";}
                 String bd = birthday;
                 updateProfile(fn, ln, un, pw, bd, st);
