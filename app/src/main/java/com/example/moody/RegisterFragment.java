@@ -122,7 +122,7 @@ public class RegisterFragment extends Fragment {
             editPassword.requestFocus();
             return;
         }
-        
+
         if(comfirm.length() < 8){
             comfirm.setError("Password length should be at least 8 characters");
             comfirm.requestFocus();
