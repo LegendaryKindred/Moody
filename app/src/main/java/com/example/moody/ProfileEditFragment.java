@@ -35,7 +35,7 @@ public class ProfileEditFragment extends Fragment{
     TextView birthday_date, done, status;
     Switch statusSwitch;
 
-    EditText firstName, lastName, username, password;
+    EditText firstName, lastName, username, password,confirm;
     private final static String DEFAULT_PUBLIC = "Public";
     private final static String DEFAULT_PRIVATE = "Private";
     private FirebaseUser user;
@@ -56,6 +56,7 @@ public class ProfileEditFragment extends Fragment{
         password = view.findViewById(R.id.editPassword);
         status = view.findViewById(R.id.editStatus);
         statusSwitch = view.findViewById(R.id.statusSwitch);
+        confirm=view.findViewById(R.id.confirm);
 
         //read data from firebase so user dont need to type the data they dont want to change
         user = FirebaseAuth.getInstance().getCurrentUser();
@@ -141,6 +142,39 @@ public class ProfileEditFragment extends Fragment{
                 String un = username.getText().toString().trim();
                 String pw = password.getText().toString().trim();
                 String st = status.getText().toString().trim();
+                String co = confirm.getText().toString().trim();
+
+                if(firstName.length() > 40){
+                    firstName.setError("firstName should be no more than 40 characters");
+                    firstName.requestFocus();
+                    return;
+                }
+
+                if(lastName.length() > 40){
+                    lastName.setError("lastName should be no more than 40 characters");
+                    lastName.requestFocus();
+                    return;
+                }
+
+                if(username.length() > 40){
+                    username.setError("firstName should be no more than 40 characters");
+                    username.requestFocus();
+                    return;
+                }
+
+                if(password.length() < 8){
+                    password.setError("Password length should be at least 8 characters");
+                    password.requestFocus();
+                    return;
+                }
+                if(!pw.equals(co)){
+                    confirm.setError("Password enter twice should be the same");
+                    confirm.requestFocus();
+                    password.setError("Password enter twice should be the same");
+                    password.requestFocus();
+                    return;
+                }
+
                 if(birthday==null){birthday="Nothing yet";}
                 String bd = birthday;
                 updateProfile(fn, ln, un, pw, bd, st);

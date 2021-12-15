@@ -26,7 +26,7 @@ import java.util.ArrayList;
 public class RegisterFragment extends Fragment {
     private FirebaseAuth mAuth;
 
-    private EditText editFirstName, editLastName, editUsername, editEmail, editPassword, editPhone;
+    private EditText editFirstName, editLastName, editUsername, editEmail, editPassword, editPhone,comfirm;
     private Button register;
     private FirebaseAuth auth;
     private ProgressBar progressBar;
@@ -45,6 +45,7 @@ public class RegisterFragment extends Fragment {
         editPhone = view.findViewById(R.id.registerPhone);
         register = view.findViewById(R.id.registerButton);
         progressBar = view.findViewById(R.id.registerProgressBar);
+        comfirm=view.findViewById(R.id.registerConfirmPassword);
 
         progressBar.setVisibility(view.INVISIBLE);
 
@@ -64,12 +65,21 @@ public class RegisterFragment extends Fragment {
         String username = editUsername.getText().toString().trim();
         String email = editEmail.getText().toString().trim();
         String password = editPassword.getText().toString().trim();
+        String passwordcomfirm = comfirm.getText().toString().trim();
         String phone = editPhone.getText().toString().trim();
         String friend = "Moody-Supporter/";
         String birthday = "00/00/0000";
         String status = "Private";
         String mood = "1";
         String notification = "System-Notification/";
+
+        if(!password.equals(passwordcomfirm)){
+            comfirm.setError("confirm password is different!");
+            comfirm.requestFocus();
+            editPassword.setError("confirm password is different!");
+            editPassword.requestFocus();
+            return;
+        }
 
         if(firstName.isEmpty()){
             editFirstName.setError("First Name is required!");
@@ -110,6 +120,12 @@ public class RegisterFragment extends Fragment {
         if(password.length() < 8){
             editPassword.setError("Password length should be at least 8 characters");
             editPassword.requestFocus();
+            return;
+        }
+
+        if(comfirm.length() < 8){
+            comfirm.setError("Password length should be at least 8 characters");
+            comfirm.requestFocus();
             return;
         }
 
