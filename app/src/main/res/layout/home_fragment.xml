@@ -15,11 +15,11 @@
         android:id="@+id/showDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/main_btn_background"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:src="@drawable/add_rate"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
+        android:background="@drawable/main_btn_background"
+        android:src="@drawable/add_rate"
 
         />
 

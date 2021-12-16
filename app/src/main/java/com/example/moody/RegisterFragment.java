@@ -22,6 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RegisterFragment extends Fragment {
     private FirebaseAuth mAuth;
@@ -119,6 +120,12 @@ public class RegisterFragment extends Fragment {
             return;
         }
 
+        List emotion = new ArrayList<Report>();
+//        Report example = new Report(1, 10, 10, "This is a example");
+//        emotion.add(example);
+
+
+
 
         progressBar.setVisibility(getView().VISIBLE);
         auth.createUserWithEmailAndPassword(email, password)
@@ -127,7 +134,7 @@ public class RegisterFragment extends Fragment {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     String id = auth.getUid();
-                    User user = new User(firstName, lastName, username, email, password, phone, friend, status, birthday, mood, notification, id);
+                    User user = new User(firstName, lastName, username, email, password, phone, friend, status, birthday, mood, notification, id, emotion);
                     FirebaseDatabase.getInstance().getReference("Users")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                             .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {

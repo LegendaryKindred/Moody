@@ -5,13 +5,14 @@ import com.google.android.gms.maps.model.LatLng;
 public class Report {
     private String description;
     private int mood;
-    private LatLng location;
+    private double lat, lng;
 
     public Report(){}
 
-    public Report(int mood, LatLng location, String description){
+    public Report(int mood, double lat, double lng , String description){
         this.mood = mood;
-        this.location = location;
+        this.lat = lat;
+        this.lng = lng;
         this.description = description;
     }
 
@@ -31,12 +32,20 @@ public class Report {
         this.mood = mood;
     }
 
-    public LatLng getLocation() {
-        return location;
+    public double getLat() {
+        return lat;
     }
 
-    public void setLocation(LatLng location) {
-        this.location = location;
+    public void setLat(double lat) {
+        this.lat = lat;
+    }
+
+    public double getLng() {
+        return lng;
+    }
+
+    public void setLng(double lng) {
+        this.lng = lng;
     }
 
     @Override
@@ -44,7 +53,8 @@ public class Report {
         return "Report{" +
                 "description='" + description + '\'' +
                 ", mood=" + mood +
-                ", location=" + location +
+                ", lat=" + lat +
+                ", lng=" + lng +
                 '}';
     }
 }

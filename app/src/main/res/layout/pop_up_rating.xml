@@ -28,12 +28,14 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/ratingTitle"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="20dp"
                 android:layout_marginTop="40dp"
                 android:hint="Title"
                 android:textSize="20dp" />
+
 
             <RatingBar
                 android:id="@+id/ratingBar"
@@ -42,10 +44,9 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
                 android:max="5"
-                android:progressTint="@color/darkWhite"
+                android:progressTint="@color/purple_200"
                 android:stepSize="1"
                 tools:ignore="SpeakableTextPresentCheck" />
-
 
             <Button
                 android:id="@+id/submitRating"
