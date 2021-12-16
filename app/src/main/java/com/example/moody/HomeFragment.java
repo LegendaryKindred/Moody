@@ -33,8 +33,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -71,7 +73,7 @@ public class HomeFragment extends Fragment {
                                 MarkerOptions options = new MarkerOptions().position(latLng).title("You are here");
 
                                 //zoom map
-                                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
+                                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12));
 
                                 // add marker on map
                                 googleMap.addMarker(options);
@@ -134,13 +136,31 @@ public class HomeFragment extends Fragment {
                                                                     List<Report> el = new ArrayList<Report>();
                                                                     el.add(rating);
                                                                     User.put("emotion", el);
+                                                                    User.put("mood",mood);
                                                                     ref.child(Uid).updateChildren(User);
                                                                 }else{
-                                                                    List<Report> el = (List<Report>)dataSnapshot.child("emotion").getValue();
-                                                                    HashMap User = new HashMap();
-                                                                    el.add(rating);
-                                                                    User.put("emotion", el);
-                                                                    ref.child(Uid).updateChildren(User);
+                                                                    List<Report> el = new ArrayList<>();
+                                                                    ref.child(Uid).child("emotion").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                                                                        @Override
+                                                                        public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                                                            DataSnapshot dataSnapshot1 = task.getResult();
+                                                                            for(DataSnapshot data : dataSnapshot1.getChildren()){
+                                                                                Report report = data.getValue(Report.class);
+                                                                                el.add(report);
+                                                                            }
+                                                                            el.add(rating);
+
+                                                                            int total = 0;
+                                                                            for (Report r: el) {
+                                                                                total += r.getMood();
+                                                                            }
+                                                                            int newMood = total/el.size();
+                                                                            HashMap User = new HashMap();
+                                                                            User.put("emotion", el);
+                                                                            User.put("mood",newMood);
+                                                                            ref.child(Uid).updateChildren(User);
+                                                                        }
+                                                                    });
                                                                 }
 
 

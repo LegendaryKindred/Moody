@@ -69,7 +69,7 @@ public class RegisterFragment extends Fragment {
         String friend = "Moody-Supporter/";
         String birthday = "00/00/0000";
         String status = "Private";
-        String mood = "1";
+        int mood = 0;
         String notification = "System-Notification/";
 
         if(firstName.isEmpty()){

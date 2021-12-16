@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class User {
-    private String firstName, lastName, username, email, password, phone, friend, status, birthday, mood, notification, id;
+    private String firstName, lastName, username, email, password, phone, friend, status, birthday, notification, id;
     private List emotion;
+    private int mood;
 
     public User (){  }
 
     public User(String firstName, String lastName, String username, String email, String password,
-                String phone, String friend, String status, String birthday, String mood, String notification, String id, List emotion) {
+                String phone, String friend, String status, String birthday, int mood, String notification, String id, List emotion) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
@@ -66,10 +67,6 @@ public class User {
         return emotion;
     }
 
-    public void setEmotion(List<Report> emotion) {
-        this.emotion = emotion;
-    }
-
     public void setUsername(String username) {
         this.username = username;
     }
@@ -98,11 +95,16 @@ public class User {
         this.email = email;
     }
 
-    public String getMood() {
+
+    public void setEmotion(List emotion) {
+        this.emotion = emotion;
+    }
+
+    public int getMood() {
         return mood;
     }
 
-    public void setMood(String mood) {
+    public void setMood(int mood) {
         this.mood = mood;
     }
 
