@@ -32,7 +32,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/input"
-            android:hint="username"
+            android:hint="E-mail"
+            android:singleLine="true"
             android:paddingLeft="20dp" />
 
         <EditText
@@ -44,6 +45,7 @@
             android:background="@drawable/input"
             android:hint="Password"
             android:inputType="textPassword"
+            android:singleLine="true"
             android:paddingLeft="20dp" />
 
         <Button
