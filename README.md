@@ -3,6 +3,8 @@ CS 506 Team Project
 
 Setup Instruction:
 
+NOTE: Use the <b>Main branch</b> to test the project. The test branch will be the branch that includes the tests.
+
 <b>1. Android Studio (Built-in Emulator)</b>
 - Install Android Studio
 - After opne AS, select File on the top tool bar and select "Open Project"
