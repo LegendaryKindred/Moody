@@ -25,6 +25,7 @@ import com.google.firebase.database.GenericTypeIndicator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class FindNewFriendsFragment extends Fragment {
     EditText friendSearchET;
@@ -62,9 +63,10 @@ public class FindNewFriendsFragment extends Fragment {
                             DataSnapshot snapshot = task.getResult();
                             Iterable<DataSnapshot> users = snapshot.getChildren();
                             for (DataSnapshot user: users) {
-                                User u = (User)user.getValue();
-                                if(u.getEmail().contains(searchString)){
-                                    newFriendList.add(new ModelClassNewFriends(R.drawable.img, u.getEmail(), R.drawable.add));
+                                Map<String, Object> u = (Map<String,Object>)user.getValue();
+                                String email = u.get("email").toString();
+                                if(email.contains(searchString)){
+                                    newFriendList.add(new ModelClassNewFriends(R.drawable.img, email, R.drawable.add));
                                 }
                             }
                         }

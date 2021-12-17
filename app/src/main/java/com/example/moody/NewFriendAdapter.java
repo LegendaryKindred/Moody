@@ -21,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class NewFriendAdapter extends RecyclerView.Adapter<NewFriendAdapter.ViewHolder>  {
 
@@ -57,10 +58,10 @@ public class NewFriendAdapter extends RecyclerView.Adapter<NewFriendAdapter.View
 
                                 DataSnapshot dataSnapshot = task.getResult();
                                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
-                                    User user = snapshot.getValue(User.class);
-                                    String Uid;
-                                    if(user.getEmail().equals(name)){
-                                        Uid = user.getId();
+                                    Map<String, Object> u = (Map<String,Object>)snapshot.getValue();
+                                    String email = u.get("email").toString();
+                                    String Uid = u.get("id").toString();
+                                    if(email.equals(name)){
                                         ref.child(Uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                                             @Override
                                             public void onComplete(@NonNull Task<DataSnapshot> task) {
