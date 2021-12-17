@@ -57,8 +57,6 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_fragment, container, false);
         ImageButton btnShowDialog = view.findViewById(R.id.showDialog);
-
-        //Google Map
         supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         client = LocationServices.getFusedLocationProviderClient(getActivity());
 
