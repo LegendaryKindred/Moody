@@ -40,10 +40,12 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.core.Repo;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class HomeFragment extends Fragment {
 
@@ -96,6 +98,33 @@ public class HomeFragment extends Fragment {
                                                 ArrayList<String> friendList = helper.friendStringToList(friends);
                                                 System.out.println(friendList.toString());
                                                 System.out.println(friendList.size());
+
+                                                ref.child("Users").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                                        if(task.isSuccessful()){
+                                                            DataSnapshot snapshot = task.getResult();
+                                                            Iterable<DataSnapshot> users = snapshot.getChildren();
+                                                            for (DataSnapshot user: users) {
+                                                                Map<String, Object> u = (Map<String,Object>)user.getValue();
+                                                                String femail = u.get("email").toString();
+                                                                if(friendList.contains(femail)){
+                                                                    System.out.println("check the extra marker");
+                                                                    List<Report> reports = (List<Report>) u.get("emotion");
+                                                                    Report lastEmo = reports.get(reports.size()-1);
+                                                                    LatLng latLng = new LatLng(lastEmo.getLat(), lastEmo.getLng());
+                                                                    System.out.println(latLng.toString());
+                                                                    MarkerOptions options = new MarkerOptions().position(latLng).title(lastEmo.getDescription());
+                                                                    googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12));
+                                                                    googleMap.addMarker(options);
+                                                                }else{
+                                                                    continue;
+                                                                }
+
+                                                            }
+                                                        }
+                                                    }
+                                                });
                                             }
                                         }
                                     }
