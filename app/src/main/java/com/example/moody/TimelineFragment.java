@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
@@ -30,16 +31,39 @@ import java.util.List;
 public class TimelineFragment extends Fragment {
 
     LineGraphSeries<DataPoint> series;
-    String DEFAULT_TIPS;
+    TextView message;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.timeline_fragment, container, false);
+        message = view.findViewById(R.id.timeline_text);
+
 
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String Uid = user.getUid();
 
+        ref.child(Uid).child("mood").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                String mood = String.valueOf(task.getResult().getValue());
+                if(mood.equals("1")){
+                    message.setText("You can go to a psychological help for your problem.");
+                }
+                if(mood.equals("2")){
+                    message.setText("Don't be so sad, try to reach out to the advisor about your issue.");
+                }
+                if(mood.equals("3")){
+                    message.setText("Feeling neutral? Try to talk to your friends/families about your day.");
+                }
+                if(mood.equals("4")){
+                    message.setText("You are getting there! Try to do some light exercises, it will help reduce your stress.");
+                }
+                if(mood.equals("5")){
+                    message.setText("Happy to hear that! Keeps up with the mood!");
+                }
+            }
+        });
         List<Report> el = new ArrayList<>();
         ref.child(Uid).child("emotion").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
