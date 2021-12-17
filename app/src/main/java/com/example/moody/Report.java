@@ -1,7 +1,4 @@
 package com.example.moody;
-
-import com.google.android.gms.maps.model.LatLng;
-
 public class Report {
     private String description;
     private int mood;
