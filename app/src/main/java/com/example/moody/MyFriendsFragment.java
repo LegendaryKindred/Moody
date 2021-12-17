@@ -60,7 +60,7 @@ public class MyFriendsFragment extends Fragment {
                         if(email.matches("System-Notification")||email.equals("")){
                             continue;
                         }else{
-                            newFriendList.add(new ModelClassMyFriends(R.drawable.img, email, R.drawable.block, "1"));
+                            newFriendList.add(new ModelClassMyFriends(R.drawable.img, email, R.drawable.block,""));
                         }
                     }
                     layoutManager = new LinearLayoutManager(getContext());
