@@ -8,7 +8,7 @@ public class User {
     private List emotion;
     private int mood;
 
-    public User (){  }
+    public User (){ }
 
     public User(String firstName, String lastName, String username, String email, String password,
                 String phone, String friend, String status, String birthday, int mood, String notification, String id, List emotion) {

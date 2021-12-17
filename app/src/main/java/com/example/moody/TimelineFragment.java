@@ -35,23 +35,6 @@ public class TimelineFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.timeline_fragment, container, false);
-//
-//        double y, x;
-//        x = 0;
-//        GraphView graph = (GraphView) view.findViewById(R.id.graph);
-//        series = new LineGraphSeries<DataPoint>();
-//        for(int i = 0; i<50; i++){
-//            x =  x+ 0.1;
-//            y = Math.sin(x);
-//            series.appendData(new DataPoint(x, y), true, 50);
-//        }
-//        graph.addSeries(series);
-//
-//        series.setColor(Color.GREEN);
-//        series.setDrawBackground(true);
-//        series.setBackgroundColor(Color.rgb(201,230, 225));
-//        series.setDrawDataPoints(true);
-
 
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();

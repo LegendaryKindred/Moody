@@ -4,6 +4,8 @@ import android.app.Dialog;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
+import android.os.FileObserver;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,15 +70,37 @@ public class HomeFragment extends Fragment {
                             public void onMapReady(@NonNull GoogleMap googleMap) {
                                 //Initialize lat lng
                                 LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-
+                                googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
                                 //create maker options
                                 MarkerOptions options = new MarkerOptions().position(latLng).title("You are here");
 
                                 //zoom map
                                 googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12));
 
+
                                 // add marker on map
                                 googleMap.addMarker(options);
+
+                                DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
+                                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                String Uid = user.getUid();
+                                ref.child(Uid).child("friend").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                        if(task.isSuccessful()){
+                                            if(task.getResult().exists()){
+                                                DataSnapshot dataSnapshot = task.getResult();
+                                                String friends = String.valueOf(dataSnapshot.getValue());
+                                                FirebaseHelper helper = new FirebaseHelper();
+                                                ArrayList<String> friendList = helper.friendStringToList(friends);
+                                                System.out.println(friendList.toString());
+                                                System.out.println(friendList.size());
+                                            }
+                                        }
+                                    }
+                                });
+
+
                             }
                         });
                     }

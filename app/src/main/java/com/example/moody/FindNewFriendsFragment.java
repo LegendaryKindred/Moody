@@ -21,6 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.GenericTypeIndicator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,7 +62,7 @@ public class FindNewFriendsFragment extends Fragment {
                             DataSnapshot snapshot = task.getResult();
                             Iterable<DataSnapshot> users = snapshot.getChildren();
                             for (DataSnapshot user: users) {
-                                User u = user.getValue(User.class);
+                                User u = (User)user.getValue();
                                 if(u.getEmail().contains(searchString)){
                                     newFriendList.add(new ModelClassNewFriends(R.drawable.img, u.getEmail(), R.drawable.add));
                                 }
