@@ -1,7 +1,9 @@
 # Moody
 CS 506 Team Project
 
-Setup Instruction:
+In the repo, there are 6 branches: main, Test, Yoo, xian, shizhen, and rui. The last four branches are just historical branches that are used to develop the main branch. main and Test cannot merge into one branch because the test methods will not work on the main branch.
+
+## Setup Instruction:
 
 NOTE: Use the <b>Main branch</b> to test the project. The test branch will be the branch that includes the tests.
 
